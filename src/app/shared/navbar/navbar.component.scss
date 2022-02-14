@@ -1,0 +1,24 @@
+.nav-bar{
+    margin-top:90px;
+    padding:10px;
+    ul{
+        margin:0;
+        padding:0;
+        list-style-type:none;
+        li{
+            img{
+                width:24px;
+            }
+        }
+    }
+}
+
+.offcanvas{
+    background-color: #e6e7ee;
+}
+
+.offcanvas-start{
+    top:90px;
+    width:75%;
+}
+

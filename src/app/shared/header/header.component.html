@@ -1,0 +1,23 @@
+<div class="header d-flex justify-content-between">
+    <div>
+        <button class="btn logo btn-primary animate-down-2"><a class="text-secondary" routerLink="">{{edupoly}}</a></button>
+        <button class="btn btn-primary mx-2 d-inline-block d-md-none d-lg-none d-xl-none" (click)="openMenuModal(menuModal)">Menu</button>
+    </div>
+    <div class="d-none d-md-block d-lg-block d-xl-block">
+        <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2">Tutorials</button></a>
+        <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2">Trainings</button></a>
+        <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2">Blog</button></a>
+        <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2">Jobs</button></a>
+    </div>
+</div>
+
+<ng-template #menuModal>
+    <div class="modal-content shadow-soft">
+        <div class="modal-body">
+            <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2" (click)="modalRef?.hide()">Tutorials</button></a>
+            <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2" (click)="modalRef?.hide()">Trainings</button></a>
+            <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2" (click)="modalRef?.hide()">Blog</button></a>
+            <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2" (click)="modalRef?.hide()">Jobs</button></a>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-between">
+    <div class="technologies card shadow-soft border-light d-none d-md-block d-lg-block d-xl-block mx-auto">
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="tech card shadow-inset p-3 animate-down-2" *ngFor="let technology of technologies" (click)="openTutorialsModal(tutorialsModal,technology._id,technology.title)">
+                <div class="card-body shadow-soft rounded animate-down-2 d-flex flex-column justify-content-between">
+                    <b>{{technology.title}}</b>
+                </div>
+            </div>       
+        </div>
+    </div>
+
+    <!-- <div class="technologies shadow-soft border-light card d-block d-md-none d-lg-none d-xl-none">
+        <div class="card-body d-flex flex-wrap justify-content-between">
+            <button class="btn btn-primary" *ngFor="let technology of technologies" (click)="openTutorialsModal(tutorialsModal,technology._id,technology.title)">{{technology.title}}</button>
+        </div>
+    </div> -->
+
+    <div class="technologies shadow-soft border-light card d-block d-md-none d-lg-none d-xl-none mx-auto">
+        <div class="card-body row">
+            <div class="col-4" *ngFor="let technology of technologies;let last = last;">
+                <button class="btn btn-primary animate-down-2" [ngClass]="{'mb-0': last}" (click)="openTutorialsModal(tutorialsModal,technology._id,technology.title)">{{technology.title}}</button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #tutorialsModal>
+        <div class="modal-content shadow-soft">
+            <div class="modal-header">
+            <h4 class="modal-title pull-left">{{modalTitle}} tutorials</h4>
+            <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+                <span aria-hidden="true" class="visually-hidden">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="tutorials">
+                    <div class="tutorial" *ngFor="let tutorial of tutorials" (click)="modalRef?.hide()">
+                        <button class="btn btn-primary btn-block animate-down-2" (click)="goToTutorial(tutorial)">{{tutorial.title}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>

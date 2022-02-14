@@ -1,0 +1,11 @@
+.topic{
+    margin-left: 300px;
+    padding: 50px;
+}
+@media(max-width:415px){
+    .topic{
+        margin-left:0;
+        padding: 20px;
+    }
+}
+

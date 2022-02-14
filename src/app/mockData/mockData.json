@@ -1,0 +1,99 @@
+{
+    "technologies":[
+        {
+            "_id":"619e630af90073358c87f2f8",
+            "title":"HTML",
+            "tagline":"Hyper Text Markup Language",
+            "__v":0
+        },
+        {
+            "_id":"619f1cefac6b8342b864b593",
+            "title":"CSS",
+            "tagline":"Cascading Style Sheet",
+            "__v":0
+        },
+        {
+            "_id":"61a9b9a32d7919bd8188c655",
+            "title":"JavaScript",
+            "tagline":"Control HTML and CSS"
+        },
+        {
+            "_id":"61ab3f6338391b4014d4e1a6",
+            "title":"Typescript",
+            "tagline":"Typed Javascript for safety",
+            "__v":0
+        },
+        {
+            "_id":"61ab3fbd38391b4014d4e1a7",
+            "title":"Angular",
+            "tagline":"SPA framework",
+            "__v":0
+        },
+        {
+            "_id":"61ab493538391b4014d4e1a9",
+            "title":"React JS",
+            "tagline":"JS library for Frontend",
+            "__v":0
+        },
+        {
+            "_id":"61ab49d338391b4014d4e1aa",
+            "title":"NodeJS",
+            "tagline":"Backend JS library",
+            "__v":0
+        },
+        {
+            "_id":"61b303911f4842418c9495b3",
+            "title":"Bootstrap",
+            "tagline":"UI library",
+            "__v":0
+        },
+        {
+            "_id":"61b303d31f4842418c9495b4",
+            "title":"ExpressJS",
+            "tagline":"NodeJs framework for web application development",
+            "__v":0
+        },
+        {
+            "_id":"61b304091f4842418c9495b5",
+            "title":"MongoDB",
+            "tagline":"NoSQL database program",
+            "__v":0
+        },
+        {
+            "_id":"6200dba96f1e362d48a07fe9",
+            "title":"Dart",
+            "tagline":"The language for Flutter",
+            "__v":0
+        }
+    ],
+    "tutorials":[
+        {
+            "_id":"619e6312f90073358c87f2f9",
+            "title":"HTML Advanced",
+            "tagline":"Learn more about HTML",
+            "technologyId":"619e630af90073358c87f2f8",
+            "__v":0
+        },
+        {
+            "_id":"619f1d2bac6b8342b864b594",
+            "title":"HTML Basic",
+            "tagline":"Understand and Use HTML from Basic",
+            "technologyId":"619e630af90073358c87f2f8",
+            "__v":0
+        },
+        {
+            "_id":"619f1d48ac6b8342b864b595",
+            "title":"HTML Master",
+            "tagline":"Apply HTML5 for realworld issues",
+            "technologyId":"619e630af90073358c87f2f8",
+            "__v":0
+        },
+        {
+            "_id":"61ab47ed38391b4014d4e1a8",
+            "technologyId":"619e630af90073358c87f2f8",
+            "title":"HTML Pro",
+            "tagline":"HTML for professionals",
+            "__v":0
+        }
+    ]
+}

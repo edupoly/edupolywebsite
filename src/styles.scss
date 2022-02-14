@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/neumorphism.css";
+/* body,html{
+    height: 100%;
+} */
+.nav-bar{
+    .offcanvas-backdrop{
+        opacity:0;
+    }
+}
+
+
+/* .modal-content{
+    background-color: #009DB2;
+} */
+
+pre.ql-syntax{
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+span.hljs-name{
+    color:red;
+}
+
+blockquote{
+    padding: 5px;
+    border-left: 5px solid blue;
+}
