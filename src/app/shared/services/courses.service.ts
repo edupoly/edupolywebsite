@@ -1,15 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import {environment} from '../../../environments/environment'
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
-  technologiesUrl = "http://localhost:4000/tutorial/technologiesList";
-  tutorialsUrl = "http://localhost:4000/tutorial/tutorialListByTechnologyId";
-  topicUrl = "http://localhost:4000/tutorial/topicByTopicId";
-  conceptsUrl = "http://localhost:4000/tutorial/conceptListByTutorialId";
-  constructor(private http:HttpClient) { }
+  technologiesUrl = `${environment.tutorialApi}technologiesList`;
+  tutorialsUrl = `${environment.tutorialApi}tutorialListByTechnologyId`;
+  topicUrl = `${environment.tutorialApi}topicByTopicId`;
+  conceptsUrl = `${environment.tutorialApi}conceptListByTutorialId`;
+  constructor(private http:HttpClient) {
+    console.log(environment);
+   }
 
   getTechnologies(){
     return this.http.get(this.technologiesUrl);

@@ -2,10 +2,63 @@
     margin-left: 300px;
     padding: 50px;
 }
+
 @media(max-width:415px){
     .topic{
         margin-left:0;
         padding: 20px;
+        max-width:414px;
     }
 }
+
+@media(max-width:393.6px){
+    .topic{
+        margin-left:0;
+        padding: 20px;
+        max-width:393px;
+    }
+}
+
+@media(max-width:391px){
+    .topic{
+        margin-left:0;
+        padding: 20px;
+        max-width:390px;
+    }
+}
+
+@media(max-width:375.2px){
+    .topic{
+        margin-left:0;
+        padding: 20px;
+        max-width:375px;
+    }
+}
+
+@media(max-width:360px){
+    .topic{
+        margin-left:0;
+        padding: 20px;
+        max-width:360px;
+    }
+}
+
+@media(max-width:320px){
+    .topic{
+        margin-left:0;
+        padding: 20px;
+        max-width:320px;
+    }
+}
+
+@media(max-width:280px){
+    .topic{
+        margin-left:0;
+        padding: 20px;
+        max-width:280px;
+    }
+}
+
+
+
 

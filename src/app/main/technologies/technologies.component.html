@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-between">
+<div class="d-flex justify-content-between"  *ngIf="technologies">
     <div class="technologies card shadow-soft border-light d-none d-md-block d-lg-block d-xl-block mx-auto">
         <div class="d-flex flex-wrap justify-content-between">
             <div class="tech card shadow-inset p-3 animate-down-2" *ngFor="let technology of technologies" (click)="openTutorialsModal(tutorialsModal,technology._id,technology.title)">
@@ -15,7 +15,7 @@
         </div>
     </div> -->
 
-    <div class="technologies shadow-soft border-light card d-block d-md-none d-lg-none d-xl-none mx-auto">
+    <div class="technologies shadow-soft border-light card d-block d-md-none d-lg-none d-xl-none mx-auto mb-5">
         <div class="card-body row">
             <div class="col-4" *ngFor="let technology of technologies;let last = last;">
                 <button class="btn btn-primary animate-down-2" [ngClass]="{'mb-0': last}" (click)="openTutorialsModal(tutorialsModal,technology._id,technology.title)">{{technology.title}}</button>
@@ -40,4 +40,7 @@
             </div>
         </div>
     </ng-template>
+</div>
+<div *ngIf="!technologies">
+    <div class="loader page-loader shadow-soft"></div>
 </div>

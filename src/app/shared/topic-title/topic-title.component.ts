@@ -17,7 +17,6 @@ export class TopicTitleComponent implements OnInit {
   ngOnInit(): void {
     this.coursesService.getTopicByTopicId(this.topic.topicId).subscribe((res:any)=>{
       this.topicTitle = res[0].title;
-      console.log(this.topicTitle);
     })
     this.ar.params.subscribe((res)=>{
       this.urlParams = res;

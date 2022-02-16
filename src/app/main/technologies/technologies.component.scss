@@ -45,7 +45,7 @@
         @extend .shadow-soft;
         .card-body{
             @extend .shadow-inset;
-            text-shadow: 5px 5px 5px #666666;
+            text-shadow: 5px 5px 8px #666666;
             @extend .text-secondary;
         }
     }

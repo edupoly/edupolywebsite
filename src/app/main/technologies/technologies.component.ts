@@ -29,7 +29,6 @@ export class TechnologiesComponent implements OnInit {
     this.modalTitle = techTitle;
     this.coursesService.getTutorialsByTechId(techId).subscribe((res:any)=>{
       this.tutorials = res;
-      console.log(this.tutorials);
     })
     //this.tutorials = json.tutorials;  // from mockData
   }

@@ -1,4 +1,5 @@
 .nav-bar{
+    width:100%;
     margin-top:90px;
     padding:10px;
     ul{
@@ -20,5 +21,32 @@
 .offcanvas-start{
     top:90px;
     width:75%;
+}
+
+.list-group-item.active{
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important;
+    @extend .text-secondary;
+    &:first-child{
+        border-top-left-radius: 0.55rem;
+        border-top-right-radius: 0.55rem;
+    }
+    &:last-child{
+        border-bottom-right-radius: 0.55rem;
+        border-bottom-left-radius: 0.55rem;
+    }
+}
+
+.text-secondary {
+    color: #2D4CC8 !important;
+}
+
+
+
+.text-black{
+    color: black;
+}
+
+.p-sp{
+    padding:10px;
 }
 

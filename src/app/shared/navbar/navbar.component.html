@@ -1,13 +1,20 @@
 <div class="nav-bar d-flex d-md-none d-lg-none d-xl-none shadow-soft justify-content-between">
     <div class="side-bar">
         <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"><img src="assets/list.svg"></button>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-start rounded shadow-soft" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">{{tutorialTitle}}</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-            
+                <div class="concept mb-2 shadow-inset rounded p-2" *ngFor="let concept of allConcepts">
+                    <h5 class="text-black p-sp m-0">{{concept.title}}</h5>
+                    <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
+                        <div data-bs-dismiss="offcanvas" class="list-group-item p-0" *ngFor="let topic of concept.topicSequence" [ngClass]="urlQueryParams.topicId===topic.topicId?'active':''">
+                            <app-topic-title [topic]="topic"></app-topic-title>            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

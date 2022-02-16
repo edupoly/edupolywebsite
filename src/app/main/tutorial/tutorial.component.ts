@@ -7,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./tutorial.component.scss']
 })
 export class TutorialComponent implements OnInit {
-  tutorialId:any;
   constructor() { }
 
   ngOnInit(): void {

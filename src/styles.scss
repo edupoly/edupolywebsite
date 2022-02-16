@@ -1,30 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./styles/neumorphism.css";
-/* body,html{
-    height: 100%;
-} */
+@import "./styles/loaders.css";
+
 .nav-bar{
     .offcanvas-backdrop{
         opacity:0;
     }
 }
 
-
-/* .modal-content{
-    background-color: #009DB2;
-} */
-
 pre.ql-syntax{
     background-color: black;
     padding: 20px;
     border-radius: 10px;
+    color:white;
 }
 
 span.hljs-name{
-    color:red;
+    color:red !important;
 }
 
 blockquote{
     padding: 5px;
-    border-left: 5px solid blue;
+    border-left: 5px solid #2D4CC8;
+    background-color:white;
+}
+
+.btn-primary:focus{
+    background-color: #e6e7ee !important;
+    border-color:#e6e7ee !important;
+    color:black;
 }

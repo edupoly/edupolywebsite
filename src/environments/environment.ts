@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  tutorialApi: "https://limitless-island-65292.herokuapp.com/tutorial/"
 };
 
 /*

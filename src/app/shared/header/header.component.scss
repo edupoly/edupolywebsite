@@ -17,14 +17,14 @@
     button{
         &:hover{
             cursor:pointer;
-            text-shadow: 3px 3px 3px #666666;
-            @extend .text-secondary;
+            text-shadow: 5px 5px 8px #666666;
+            @extend .text-bold;
         }
     }
 }
 
-.text-secondary {
-    color: #2D4CC8 !important;
+.text-bold {
+    font-weight: bold;
 }
 
 
@@ -37,3 +37,30 @@
 .logo{
     font-size:32px;
 }
+
+
+
+@media(max-width:375.2px){
+    .header{
+        width:375px;
+    }
+}
+
+@media(max-width:360px){
+    .header{
+        width:360px;
+    }
+}
+
+@media(max-width:320px){
+    .header{
+        padding:20px;
+    }
+}
+
+@media(max-width:280px){
+    .header{
+        padding:20px 5px;
+    }
+}
+
