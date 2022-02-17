@@ -7,7 +7,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  edupoly = "{ EduPoly }";
+  edupoly = "[ EduPoly ]";
   modalRef?: BsModalRef;
 
   constructor(private modalService: BsModalService) { }
