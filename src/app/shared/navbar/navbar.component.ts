@@ -11,7 +11,8 @@ export class NavbarComponent implements OnInit {
   urlQueryParams:any;
   tutorialTitle:any
 
-  constructor(public ar:ActivatedRoute) { }
+  constructor(public ar:ActivatedRoute) {
+   }
 
   ngOnInit(): void {
     this.ar.params.subscribe((res)=>{
@@ -22,5 +23,7 @@ export class NavbarComponent implements OnInit {
       this.allConcepts = JSON.parse(res.concepts);
     })
   }
+
+  
 
 }
