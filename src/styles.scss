@@ -17,9 +17,27 @@ pre.ql-syntax{
 
 .ql-font-monospace{
     font-family: 'Cutive Mono', monospace;
+    background-color: #d1d1d1;
+    padding:2px;
+    border-radius:3px;
+}
+
+blockquote .ql-font-monospace{
+    font-family: 'Cutive Mono', monospace;
+    background-color: white !important;
+}
+
+ol,ul,dl{
+    margin-bottom:0.5rem;
+}
+
+a{
+    text-decoration: underline;
+    color: #2D4CC8;
 }
 
 blockquote{
+    margin:3px 0;
     padding: 5px;
     border-left: 5px solid #2D4CC8;
     background-color:white;
