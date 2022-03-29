@@ -2,6 +2,10 @@
 @import "./styles/neumorphism.css";
 @import "./styles/loaders.css";
 
+*{
+    letter-spacing:0.01px;
+}
+
 .nav-bar{
     .offcanvas-backdrop{
         opacity:0;
@@ -19,23 +23,16 @@ pre.ql-syntax{
 .ql-font-monospace{
     font-family: 'Cutive Mono', monospace;
     background-color: #d1d1d1;
-    padding:2px;
-    border-radius:3px;
+    padding:2px 4px;
+    border-radius:4px;
+    font-weight:600;
 }
 
 blockquote .ql-font-monospace{
     font-family: 'Cutive Mono', monospace;
-    background-color: white !important;
+    background-color: transparent;    
 }
 
-ol,ul,dl{
-    margin-bottom:0.5rem;
-}
-
-a{
-    text-decoration: underline;
-    color: #2D4CC8;
-}
 
 blockquote{
     margin:3px 0;

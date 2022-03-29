@@ -4,6 +4,10 @@
     max-width:1219px;
 }
 
+ol,ul,dl{
+    margin-bottom:0.5rem;
+}
+
 @media(max-width:415px){
     .topic{
         margin-left:0;
