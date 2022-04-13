@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './main/home/home.component';
 import { TechnologiesComponent } from './main/technologies/technologies.component';
 import { TutorialComponent } from './main/tutorial/tutorial.component';
+import { TopicComponent } from './shared/topic/topic.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,17 @@ const routes: Routes = [
   },
   {
     path: 'tutorial/:tutorialTitle/concept/:conceptTitle/topic/:topicTitle',
-    component: TutorialComponent
+    component: TutorialComponent,
+    children:[
+      {
+        path: '',
+        component: TopicComponent
+      },
+      {
+        path: 'tutorial/:tutorialTitle/concept/:conceptTitle/topic/:topicTitle',
+        component: TopicComponent
+      }
+    ]
   },
 ];
 

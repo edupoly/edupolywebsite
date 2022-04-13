@@ -7,6 +7,7 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
 import { RouterModule } from '@angular/router';
 import { TopicTitleComponent } from './topic-title/topic-title.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TopicComponent } from './topic/topic.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     FooterComponent,
     SidePanelComponent,
     TopicTitleComponent,
-    NavbarComponent
+    NavbarComponent,
+    TopicComponent
   ],
   imports: [
     CommonModule,

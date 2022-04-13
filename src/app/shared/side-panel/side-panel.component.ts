@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CoursesService } from '../services/courses.service';
 
 @Component({
   selector: 'app-side-panel',
@@ -9,13 +10,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SidePanelComponent implements OnInit {
   allConcepts: any;
   urlQueryParams:any;
-
-  constructor(public ar:ActivatedRoute) { }
+  currentTopicId:any;
+  constructor(public ar:ActivatedRoute, private coursesService:CoursesService) { }
 
   ngOnInit(): void {   
+    
     this.ar.queryParams.subscribe((res)=>{
-      this.urlQueryParams = res;
-      this.allConcepts = JSON.parse(res.concepts);
+      if(this.coursesService.currentConcepts!==res.concepts){
+        this.coursesService.currentConcepts = res.concepts;
+        this.urlQueryParams = res;
+        this.allConcepts = JSON.parse(res.concepts);
+        this.currentTopicId = this.urlQueryParams.topicId;
+      }
     })
+  }
+
+  setCurrentTopicId(topicId:any){
+    this.currentTopicId = topicId;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../services/courses.service';
 
@@ -9,9 +9,11 @@ import { CoursesService } from '../services/courses.service';
 })
 export class TopicTitleComponent implements OnInit {
   @Input() topic:any;
+  @Output() topicIdEvent = new EventEmitter();
   topicTitle:any;
   urlParams:any;
   urlQueryParams:any;
+  
   constructor(private coursesService:CoursesService,public ar:ActivatedRoute,public router:Router) { }
 
   ngOnInit(): void {
@@ -27,7 +29,8 @@ export class TopicTitleComponent implements OnInit {
   }
 
   loadSelectedTopic(topicId:any){
-    this.router.navigate([`tutorial/${this.urlParams.tutorialTitle}/concept/${this.urlParams.conceptTitle}/topic/${this.urlParams.topicTitle}`],{ queryParams: {topicId:topicId, concepts:this.urlQueryParams.concepts } })
+    this.topicIdEvent.emit(topicId);
+    this.router.navigate([`/tutorial/${this.urlParams.tutorialTitle}/concept/${this.urlParams.conceptTitle}/topic/${this.urlParams.topicTitle}`],{ queryParams: {topicId:topicId, concepts:this.urlQueryParams.concepts } })
   }
 
 }

@@ -15,7 +15,7 @@
 pre.ql-syntax{
     background-color: black;
     padding: 20px;
-    margin:3px 0;
+    margin:3px 0 20px;
     border-radius: 10px;
     color:white;
 }
@@ -45,4 +45,9 @@ blockquote{
     background-color: #e6e7ee !important;
     border-color:#e6e7ee !important;
     color:black;
+}
+
+iframe{
+    width: 100%;
+    height: 500px;
 }

@@ -5,7 +5,6 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-import { TopicComponent } from './topic/topic.component';
 import { TopicContentComponent } from './topic-content/topic-content.component';
 
 
@@ -15,7 +14,6 @@ import { TopicContentComponent } from './topic-content/topic-content.component';
     HomeComponent,
     TechnologiesComponent,
     TutorialComponent,
-    TopicComponent,
     TopicContentComponent
   ],
   imports: [

@@ -9,9 +9,9 @@ export class CoursesService {
   tutorialsUrl = `${environment.tutorialApi}tutorialListByTechnologyId`;
   topicUrl = `${environment.tutorialApi}topicByTopicId`;
   conceptsUrl = `${environment.tutorialApi}conceptListByTutorialId`;
-  constructor(private http:HttpClient) {
-    console.log(environment);
-   }
+  currentConcepts:any;
+  
+  constructor(private http:HttpClient) {}
 
   getTechnologies(){
     return this.http.get(this.technologiesUrl);
