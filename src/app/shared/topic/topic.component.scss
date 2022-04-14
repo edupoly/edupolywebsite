@@ -8,11 +8,11 @@ ol,ul,dl{
     margin-bottom:0.5rem;
 }
 
-@media(min-width:394px) and (max-width:768px){
+@media(max-width:415px){
     .topic{
         margin-left:0;
         padding: 20px;
-        max-width:728px;
+        max-width:412px;
         margin-top:64px;
     }
 }
