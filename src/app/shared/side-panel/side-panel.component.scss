@@ -50,3 +50,12 @@
 .p-sp{
     padding:5px;
 }
+
+.topic-link{
+    padding:0 20px;
+    @extend .cursor-pointer;
+}
+
+.cursor-pointer{
+    cursor: pointer;    
+}

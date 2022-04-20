@@ -3,7 +3,7 @@
         <h5 class="text-black p-sp m-0">{{concept.title}}</h5>
         <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
             <div class="list-group-item p-0" *ngFor="let topic of concept.topicSequence" [ngClass]="currentTopicId===topic.topicId?'active':''">
-                <app-topic-title [topic]="topic" (topicIdEvent)="setCurrentTopicId($event)"></app-topic-title>            
+                <div class="topic-link" (click)="setCurrentTopicId(topic)">{{topic.topicTitle}}</div>
             </div>
         </div>
     </div>

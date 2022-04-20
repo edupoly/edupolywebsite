@@ -13,19 +13,19 @@ export class TopicTitleComponent implements OnInit {
   topicTitle:any;
   urlParams:any;
   urlQueryParams:any;
-  
-  constructor(private coursesService:CoursesService,public ar:ActivatedRoute,public router:Router) { }
+  constructor(private coursesService:CoursesService,public ar:ActivatedRoute,public router:Router) {
+   }
 
   ngOnInit(): void {
     this.coursesService.getTopicByTopicId(this.topic.topicId).subscribe((res:any)=>{
       this.topicTitle = res[0].title;
-    })
+    });
     this.ar.params.subscribe((res)=>{
       this.urlParams = res;
-    })
+    });
     this.ar.queryParams.subscribe((res)=>{
       this.urlQueryParams = res;
-    })
+    });
   }
 
   loadSelectedTopic(topicId:any){

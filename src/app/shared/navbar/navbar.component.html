@@ -10,8 +10,8 @@
                 <div class="concept mb-2 shadow-inset rounded p-2" *ngFor="let concept of allConcepts">
                     <h5 class="text-black p-sp m-0">{{concept.title}}</h5>
                     <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
-                        <div data-bs-dismiss="offcanvas" class="list-group-item p-0" *ngFor="let topic of concept.topicSequence" [ngClass]="urlQueryParams.topicId===topic.topicId?'active':''">
-                            <app-topic-title [topic]="topic"></app-topic-title>            
+                        <div data-bs-dismiss="offcanvas" class="list-group-item p-0" *ngFor="let topic of concept.topicSequence" [ngClass]="currentTopicId===topic.topicId?'active':''">
+                            <div class="topic-link" (click)="setCurrentTopicId(topic)">{{topic.topicTitle}}</div>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CoursesService } from 'src/app/shared/services/courses.service';
 
 @Component({
   selector: 'app-tutorial',
@@ -7,10 +8,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./tutorial.component.scss']
 })
 export class TutorialComponent implements OnInit {
-  constructor() { }
+  constructor(private ar:ActivatedRoute) { }
 
   ngOnInit(): void {
-    
   }
 
 }

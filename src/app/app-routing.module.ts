@@ -21,10 +21,6 @@ const routes: Routes = [
       {
         path: '',
         component: TopicComponent
-      },
-      {
-        path: 'tutorial/:tutorialTitle/concept/:conceptTitle/topic/:topicTitle',
-        component: TopicComponent
       }
     ]
   },
