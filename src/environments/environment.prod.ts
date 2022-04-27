@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  tutorialApi: "https://limitless-island-65292.herokuapp.com/tutorial/"
+  tutorialApi: "https://us-central1-edupoly-backend-9d585.cloudfunctions.net/app/tutorial/"
 };
