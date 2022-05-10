@@ -8,7 +8,7 @@ import { CoursesService } from '../services/courses.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  edupoly = "[ EduPoly ]";
+  edupoly = "{ EduPoly }";
   modalRef?: BsModalRef;
 
   constructor(private modalService: BsModalService, private coursesService:CoursesService) { }
