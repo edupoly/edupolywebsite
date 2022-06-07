@@ -1,0 +1,224 @@
+.corp-training {
+    margin-top: 120px;
+}
+
+.trainer {
+    .icon:hover {
+        @extend .shadow-inset;
+    }
+}
+
+.courses {
+    img {
+        height: 350px;
+    }
+
+    .col-7 {
+        padding-left: 50px;
+        .course-name{
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+}
+
+.course-details {
+    i {
+        color: orangered;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
+
+.shadow-inset {
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important;
+}
+
+.clients img {
+    box-sizing: content-box;
+    height: 30px;
+    padding: 20px;
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: grayscale(0%);
+        @extend .shadow-inset;
+        border-radius: 0.55rem;
+    }
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.header h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0;
+    color: #4154f1;
+    text-transform: uppercase;
+}
+
+.header p {
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .header p {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+.testimonials .testimonial-item {
+    padding: 30px 130px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.testimonials .testimonial-item .stars {
+    margin-bottom: 15px;
+}
+
+.testimonials .testimonial-item .stars i {
+    color: #ffc107;
+    margin: 0 1px;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+    margin: 0 auto;
+}
+
+.testimonials .testimonial-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.testimonials .testimonial-item h4 {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+}
+
+.testimonials .testimonial-item p {
+    font-style: italic;
+    margin: 0 auto 15px auto;
+    height: 100px;
+}
+
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(-20deg);
+    }
+
+    66% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.first:hover {
+    .fa-graduation-cap {
+        color: #2D4CC8;
+        animation-name: wave;
+        animation-duration: 1s;
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.second:hover {
+    .fa-sitemap {
+        color: #00a706;
+        animation-name: flip;
+        animation-duration: 1s;
+    }
+}
+
+.third:hover {
+    .fa-user-graduate {
+        color: #97008E;
+        animation-name: enlarge;
+        animation-duration: 1s;
+    }
+}
+
+.fourth:hover {
+    .fa-diagram-project {
+        color: #975000;
+        animation-name: wave;
+        animation-duration: 1s;
+    }
+}
+
+.fifth:hover {
+    .fa-code {
+        color: #ff7300;
+        animation-name: flip;
+        animation-duration: 1s;
+    }
+}
+
+@keyframes flow-down {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.sixth:hover {
+    .fa-list-check {
+        color: #ff0000;
+        animation-name: flow-down;
+        animation-duration: 1s;
+    }
+}
+
+@keyframes enlarge {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.seventh:hover {
+    .fa-chalkboard-user {
+        color: #00bbb8;
+        animation-name: enlarge;
+        animation-duration: 1s;
+    }
+}

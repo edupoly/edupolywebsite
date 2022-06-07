@@ -1,25 +1,25 @@
-.header{
+.header {
     height: 90px;
-    padding: 20px 30px;
-    box-shadow: 0 1px 10px 1px #557079;
-    position:fixed;
-    top:0;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
     width: 100%;
     z-index: 999;
     background-color: #e6e7ee;
 }
 
-.btn.logo{
-    padding:0 10px;
-    a{
+.btn.logo {
+    padding: 0 10px;
+
+    a {
         text-decoration: none;
     }
 }
 
-.d-none{
-    button{
-        &:hover{
-            cursor:pointer;
+.d-none {
+    button {
+        &:hover {
+            cursor: pointer;
             text-shadow: 5px 5px 8px #666666;
             @extend .text-bold;
         }
@@ -30,40 +30,75 @@
     font-weight: bold;
 }
 
+.logo {
+    font-size: 32px;
+}
 
-/* @media(max-width:415px){
-    .btn.logo{
-        font-size:24px;
+.dropdown-menu {
+    li {
+        &:hover {
+            cursor: pointer;
+            text-shadow: 3px 3px 5px #666666;
+
+            a {
+                @extend .text-bold;
+            }
+        }
     }
-} */
 
-.logo{
-    font-size:32px;
+    li:first-child {
+        a {
+            border-top-left-radius: 0.55rem;
+            border-top-right-radius: 0.55rem;
+        }
+    }
+
+    li:last-child {
+        a {
+            border-bottom-right-radius: 0.55rem;
+            border-bottom-left-radius: 0.55rem;
+        }
+    }
+}
+
+
+
+@media(max-width:375.2px) {
+    .header {
+        width: 375px;
+    }
+}
+
+@media(max-width:360px) {
+    .header {
+        width: 360px;
+    }
+}
+
+@media(max-width:320px) {
+    .header {
+        padding: 20px;
+    }
+}
+
+@media(max-width:280px) {
+    .header {
+        padding: 20px 5px;
+    }
+}
+
+.shadow-inset {
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important;
+}
+
+.btn{
+    box-shadow: none;
+    border: none;
+    &:hover,&:focus{
+        @extend .shadow-inset;
+    }
+    
 }
 
 
-
-@media(max-width:375.2px){
-    .header{
-        width:375px;
-    }
-}
-
-@media(max-width:360px){
-    .header{
-        width:360px;
-    }
-}
-
-@media(max-width:320px){
-    .header{
-        padding:20px;
-    }
-}
-
-@media(max-width:280px){
-    .header{
-        padding:20px 5px;
-    }
-}
 

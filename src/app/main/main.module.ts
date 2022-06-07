@@ -6,7 +6,10 @@ import { TutorialComponent } from './tutorial/tutorial.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { TopicContentComponent } from './topic-content/topic-content.component';
-
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CorporateTrainingComponent } from './trainings/corporate-training/corporate-training.component';
+import { BootcampTrainingComponent } from './trainings/bootcamp-training/bootcamp-training.component';
+import { CampusTrainingComponent } from './trainings/campus-training/campus-training.component';
 
 
 @NgModule({
@@ -14,12 +17,16 @@ import { TopicContentComponent } from './topic-content/topic-content.component';
     HomeComponent,
     TechnologiesComponent,
     TutorialComponent,
-    TopicContentComponent
+    TopicContentComponent,
+    CorporateTrainingComponent,
+    BootcampTrainingComponent,
+    CampusTrainingComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    CarouselModule
   ],
   exports: [
     HomeComponent
