@@ -26,6 +26,16 @@
     }
 }
 
+.btn {
+    box-shadow: none;
+    border: none;
+    &:hover,
+    &:focus {
+        @extend .shadow-inset;
+        @extend .text-bold;
+    }
+}
+
 .text-bold {
     font-weight: bold;
 }
@@ -90,15 +100,3 @@
 .shadow-inset {
     box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important;
 }
-
-.btn{
-    box-shadow: none;
-    border: none;
-    &:hover,&:focus{
-        @extend .shadow-inset;
-    }
-    
-}
-
-
-
