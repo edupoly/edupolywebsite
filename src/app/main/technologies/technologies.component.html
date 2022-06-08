@@ -2,10 +2,11 @@
     <div class="technologies card shadow-soft border-light d-none d-sm-none d-md-block d-lg-block d-xl-block mx-auto">
         <div class="d-flex flex-wrap justify-content-between">
             <div class="tech card shadow-inset p-3 animate-down-2" *ngFor="let technology of technologies" (click)="openTutorialsModal(tutorialsModal,technology._id,technology.title)">
-                <div class="card-body shadow-soft rounded animate-down-2 d-flex flex-column justify-content-between">
-                    <b>{{technology.title}}</b>
+                <div class="card-body shadow-soft rounded animate-down-2 d-flex justify-content-center align-items-center text-center">
+                    <img src="assets/html_logo_transparent.png" width="40px" alt="">
+                    <b class="ms-3">{{technology.title}}</b>
                 </div>
-            </div>       
+            </div>    
         </div>
     </div>
 
