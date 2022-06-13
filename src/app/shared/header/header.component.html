@@ -22,24 +22,38 @@
         </div>
         <!--=== dropdown ends ===-->
 
-        <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2"
+        <!-- <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2"
                 (click)="clearCurrentUrlData()">Blog</button></a>
         <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2"
-                (click)="clearCurrentUrlData()">Jobs</button></a>
+                (click)="clearCurrentUrlData()">Jobs</button></a> -->
     </div>
 </div>
 
 <ng-template #menuModal>
     <div class="modal-content shadow-soft">
-        <div class="modal-body">
+        <div class="modal-body d-flex flex-column align-items-center">
             <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
                     (click)="modalRef?.hide()">Tutorials</button></a>
             <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
                     (click)="modalRef?.hide()">Trainings</button></a>
-            <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
+            <div class="dropdown ms-3">
+                <!--=== dropdown starts ===-->
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Trainings
+                    <span class="fas fa-angle-down dropdown-arrow"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" routerLink="corporate-training" (click)="clearCurrentUrlData()">Corporate
+                            Training</a></li>
+                    <li><a class="dropdown-item" routerLink="bootcamp-training" (click)="clearCurrentUrlData()">Bootcamp
+                            Training</a></li>
+                </ul>
+            </div>
+           <!--  <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
                     (click)="modalRef?.hide()">Blog</button></a>
             <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
-                    (click)="modalRef?.hide()">Jobs</button></a>
+                    (click)="modalRef?.hide()">Jobs</button></a> -->
         </div>
     </div>
 </ng-template>
