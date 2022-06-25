@@ -1,4 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { CoursesService } from 'src/app/shared/services/courses.service';
@@ -14,10 +15,12 @@ export class TechnologiesComponent implements OnInit {
   modalRef?: BsModalRef;
   modalTitle:any;
   technologies:any;
-  tutorials:any;
-  constructor(private coursesService:CoursesService, private modalService: BsModalService,public router:Router) { }
+  tutorials: any;
+  titletext: string = "EduPoly Tutorials - Angular,ReactJS,Frontend,Backend,Full Stack,MEAN stack,MERN stack Training in Hyderabad";
+  constructor(private coursesService:CoursesService, private modalService: BsModalService,public router:Router, private titleService:Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.titletext);
     this.coursesService.getTechnologies().subscribe((res:any)=>{
       this.technologies = res;
     })

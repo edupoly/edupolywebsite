@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -20,12 +21,14 @@ export class HomeComponent implements OnInit {
     'assets/whitehat-logo.svg',
     'assets/clients/allentics.jpg'
   ]
-  constructor() { }
+
+  titletext: string = "EduPoly - Angular,ReactJS,Frontend,Backend,Full Stack,MEAN stack,MERN stack Training in Hyderabad";
+  constructor(private titleService:Title) { }
 
 
 
   ngOnInit(): void {
-    
+    this.titleService.setTitle(this.titletext);
   }
 
 }

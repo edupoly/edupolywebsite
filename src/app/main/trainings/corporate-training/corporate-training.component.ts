@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-corporate-training',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./corporate-training.component.scss']
 })
 export class CorporateTrainingComponent implements OnInit {
+  titletext: string = "EduPoly Corporate Training - Angular,ReactJS,Frontend,Backend,Full Stack,MEAN stack,MERN stack Training in Hyderabad";
   clientLogos = [
     'assets/changed/xrg.png',
     'assets/changed/Cognizant_logo_2022.png',
@@ -17,9 +19,10 @@ export class CorporateTrainingComponent implements OnInit {
     'assets/west agile.png',
     'assets/infinitylogo3.png',
   ];
-  constructor() { }
+  constructor(private titleService:Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.titletext);
   }
 
 }
