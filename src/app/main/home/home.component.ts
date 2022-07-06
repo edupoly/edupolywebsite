@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
   clientLogos = [
-    'assets/changed/xrg.png',
+    'assets/whitehat-logo.svg',
     'assets/changed/Cognizant_logo_2022.png',
     'assets/dassault.png',
     'assets/changed/datagrid.png',
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     'assets/west agile.png',
     'assets/infinitylogo3.png',
     'assets/TRST01.png',
-    'assets/whitehat-logo.svg',
+    'assets/changed/xrg.png',
     'assets/clients/allentics.jpg'
   ]
 
