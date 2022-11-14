@@ -53,30 +53,26 @@
 }
 
 .values .box {
-    padding: 30px;
     text-align: center;
     transition: 0.3s;
     height: 100%;
-    
     &:hover{
         @extend .shadow-inset;
+    }
+    .training-details{
+        padding: 0 0.5rem;
     }
 }
 
 .values .box img {
-    padding: 30px 50px;
-    transition: 0.5s;
-    transform: scale(1.1);
+    border-top-left-radius: 0.55rem;
+    border-top-right-radius: 0.55rem;
 }
 
 .values .box h3 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 18px;
-}
-
-.values .box:hover img {
-    transform: scale(1);
 }
 
 .header {
