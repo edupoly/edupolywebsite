@@ -152,9 +152,23 @@
 
     .col-7 {
         padding-left: 50px;
-        .course-name{
+
+        .course-name {
             font-size: 24px;
             font-weight: bold;
+        }
+    }
+}
+
+.mobile.courses {
+    img {
+        height: auto;
+    }
+
+    .course-details {
+        p {
+            font-size: 16px;
+            margin-bottom: 5px;
         }
     }
 }

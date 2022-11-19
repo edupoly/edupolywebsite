@@ -20,6 +20,8 @@
                 <li><a class="dropdown-item" routerLink="bootcamp-training" (click)="clearCurrentUrlData()">Bootcamp Training</a></li>
             </ul>
         </div>
+        <button class="btn btn-block btn-primary mb-2">Contact Us</button>
+
         <!--=== dropdown ends ===-->
 
         <!-- <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2"
@@ -34,8 +36,8 @@
         <div class="modal-body d-flex flex-column align-items-center">
             <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
                     (click)="modalRef?.hide()">Tutorials</button></a>
-            <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
-                    (click)="modalRef?.hide()">Trainings</button></a>
+            <!-- <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
+                    (click)="modalRef?.hide()">Trainings</button></a> -->
             <div class="dropdown ms-3">
                 <!--=== dropdown starts ===-->
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -49,6 +51,7 @@
                     <li><a class="dropdown-item" routerLink="bootcamp-training" (click)="clearCurrentUrlData()">Bootcamp
                             Training</a></li>
                 </ul>
+
             </div>
            <!--  <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
                     (click)="modalRef?.hide()">Blog</button></a>

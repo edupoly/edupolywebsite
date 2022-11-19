@@ -22,6 +22,19 @@
     }
 }
 
+.mobile.courses {
+    img {
+        height: auto;
+    }
+
+    .course-details {
+        p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
 .course-details {
     i {
         color: orangered;

@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   clearCurrentUrlData(){
     this.coursesService.currentWebConcepts = undefined;
     this.coursesService.currentMobileConcepts = undefined;
+    this.modalRef?.hide();
   }
 
   openMenuModal(template: TemplateRef<any>){
