@@ -235,3 +235,22 @@
     margin: 0 auto 15px auto;
     height: 100px;
 }
+
+@media(max-width:576px) {
+        .clients {
+                img {
+                    padding: 10px 0;
+                    filter: none;
+
+                    &:hover {
+                        filter: none;
+                        box-shadow: none !important;
+                        border: none !important;
+                    }
+                }
+
+                .client {
+                    padding: 0 !important;
+                }
+            }
+}

@@ -235,3 +235,22 @@
         animation-duration: 1s;
     }
 }
+
+@media(max-width:576px) {
+    .clients {
+        img {
+            padding: 10px 0;
+            filter: none;
+
+            &:hover {
+                filter: none;
+                box-shadow: none !important;
+                border: none !important;
+            }
+        }
+
+        .client {
+            padding: 0 !important;
+        }
+    }
+}
