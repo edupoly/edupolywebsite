@@ -237,20 +237,24 @@
 }
 
 @media(max-width:576px) {
-        .clients {
-                img {
-                    padding: 10px 0;
-                    filter: none;
+    .clients {
+        img {
+            padding: 10px 0;
+            filter: none;
 
-                    &:hover {
-                        filter: none;
-                        box-shadow: none !important;
-                        border: none !important;
-                    }
-                }
-
-                .client {
-                    padding: 0 !important;
-                }
+            &:hover {
+                filter: none;
+                box-shadow: none !important;
+                border: none !important;
             }
+        }
+
+        .client {
+            padding: 0 !important;
+        }
+    }
+
+    .testimonials .testimonial-item {
+        padding: 30px !important;
+    }
 }

@@ -1,22 +1,26 @@
-
-.home{
+.home {
     margin: 120px 48px 0;
 }
 
-.main-banner{
+.main-banner {
     margin: 0 40px;
-    h1{
-        font-weight:700;
+
+    h1 {
+        font-weight: 700;
     }
-    h2{
+
+    h2 {
         margin-left: 40px;
         color: #4154f1;
         font-weight: bold;
-        i{
+
+        i {
             color: gold;
         }
     }
-    .col-lg-7,.col-lg-5{
+
+    .col-lg-7,
+    .col-lg-5 {
         padding: 0;
     }
 }
@@ -25,7 +29,7 @@
     padding: 40px;
 }
 
-.about img{
+.about img {
     border-top-right-radius: 0.55rem;
     border-bottom-right-radius: 0.55rem;
 }
@@ -56,10 +60,12 @@
     text-align: center;
     transition: 0.3s;
     height: 100%;
-    &:hover{
+
+    &:hover {
         @extend .shadow-inset;
     }
-    .training-details{
+
+    .training-details {
         padding: 0 0.5rem;
     }
 }
@@ -218,39 +224,39 @@
     }
 }
 
-.features{
-    .angular-animate{
+.features {
+    .angular-animate {
         animation-name: flip-y;
         animation-duration: 2s;
         animation-iteration-count: infinite;
     }
 
-    .react-animate{
+    .react-animate {
         animation-name: rotate;
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
 
-    .mongo-animate{
+    .mongo-animate {
         animation-name: wave;
         animation-duration: 2s;
         animation-iteration-count: infinite;
     }
 
-    .js-animate{
+    .js-animate {
         animation-name: spiral;
         animation-duration: 2s;
         animation-iteration-count: infinite;
     }
 
-    .node-animate{
+    .node-animate {
         animation-name: enlarge;
         animation-duration: 2s;
         animation-iteration-count: infinite;
     }
 
-    .express-animate{
+    .express-animate {
         animation-name: enlarge-y;
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -289,12 +295,13 @@
 }
 
 .clients img {
-    box-sizing:content-box;
+    box-sizing: content-box;
     height: 30px;
     padding: 20px;
     filter: grayscale(100%);
-    &:hover{
-        filter:grayscale(0%);
+
+    &:hover {
+        filter: grayscale(0%);
         @extend .shadow-inset;
         border-radius: 0.55rem;
     }
@@ -383,7 +390,7 @@
     padding: 12px 15px;
 }
 
-.form-control:focus{
+.form-control:focus {
     @extend .shadow-inset;
 }
 
@@ -402,80 +409,105 @@
 
 @media(max-width:576px) {
     .shadow-soft {
-            box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
-        }
+        box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
+    }
+
     .home {
         margin: 120px 32px 0;
     }
+
     .main-banner {
         margin: 0 16px;
-        h1{
+
+        h1 {
             font-size: 24px;
         }
-        h2{
-            margin:2px 0;
+
+        h2 {
+            margin: 2px 0;
             font-size: 20px;
         }
     }
-    .values{
+
+    .values {
         border: none;
-        box-shadow:none !important;
-        .trainings{
-            padding:0 !important;
+        box-shadow: none !important;
+
+        .trainings {
+            padding: 0 !important;
         }
-        header{
-            display:none;
+
+        header {
+            display: none;
         }
-        .box{
+
+        .box {
             &:hover {
-                    @extend .shadow-soft;
-                }
+                @extend .shadow-soft;
+            }
+
             padding: 0;
-            img{
-                padding:0;
+
+            img {
+                padding: 0;
                 margin-bottom: 10px;
-                transition:none;
+                transition: none;
                 transform: none;
                 border-top-left-radius: 0.55rem;
                 border-top-right-radius: 0.55rem;
             }
-            .training-details{
-                padding:20px 30px 30px;
+
+            .training-details {
+                padding: 20px 30px 30px;
             }
         }
     }
-    .features{
-        .technologies{
-            padding:0;
-            .col-6{
-                padding:0;
-                .feature-box{
+
+    .features {
+        .technologies {
+            padding: 0;
+
+            .col-6 {
+                padding: 0;
+
+                .feature-box {
                     padding: 24px 26px;
-                    i{
-                        padding:0;
+
+                    i {
+                        padding: 0;
                     }
-                    h3{
+
+                    h3 {
                         font-size: 14px;
                     }
                 }
             }
         }
     }
-    .clients{
-        img{
+
+    .clients {
+        img {
             padding: 10px 0;
             filter: none;
+
             &:hover {
                 filter: none;
-                box-shadow:none !important;
-                border:none !important;
+                box-shadow: none !important;
+                border: none !important;
             }
         }
-        .client{
-            padding:0 !important;
+
+        .client {
+            padding: 0 !important;
         }
     }
-    .testimonials{
-        display:none;
+
+    .testimonials .testimonial-item {
+        padding: 30px 50px !important;
+
+        p{
+            height:auto;
+            font-size: 12px;
+        }
     }
 }

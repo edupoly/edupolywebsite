@@ -15,7 +15,8 @@
 
     .col-7 {
         padding-left: 50px;
-        .course-name{
+
+        .course-name {
             font-size: 24px;
             font-weight: bold;
         }
@@ -252,5 +253,9 @@
         .client {
             padding: 0 !important;
         }
+    }
+
+    .testimonials .testimonial-item {
+        padding: 30px !important;
     }
 }
