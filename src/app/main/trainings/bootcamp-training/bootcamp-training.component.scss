@@ -255,6 +255,11 @@
     }
 
     .testimonials .testimonial-item {
-        padding: 30px !important;
+        padding: 30px 50px !important;
+
+        p {
+            height: auto;
+            font-size: 12px;
+        }
     }
 }
