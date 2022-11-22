@@ -505,9 +505,39 @@
     .testimonials .testimonial-item {
         padding: 30px 50px !important;
 
-        p{
-            height:auto;
+        p {
+            height: auto;
             font-size: 12px;
+        }
+    }
+}
+
+@media(max-width:400px) {
+    .bi.bi-check {
+        display: none;
+    }
+
+    .technologies {
+        padding: 0 16px !important;
+    }
+
+    .feature-box {
+        padding: 10px 26px !important;
+    }
+}
+
+@media(max-width:350px) {
+    .feature-box {
+        justify-content: center;
+    }
+
+    .tech {
+        h3 {
+            display: none;
+        }
+
+        img {
+            min-height: 50px;
         }
     }
 }

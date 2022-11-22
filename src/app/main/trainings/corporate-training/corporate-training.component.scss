@@ -264,3 +264,9 @@
         }
     }
 }
+
+@media(max-width:400px) {
+    .bi.bi-check{
+        display:none;
+    }
+}
