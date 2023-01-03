@@ -40,6 +40,10 @@
     }
 }
 
+.projects::after {
+    background-image: none;
+}
+
 @media(max-width:576px) {
 
     .accordion-button,
