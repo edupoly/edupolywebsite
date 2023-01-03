@@ -10,6 +10,10 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CorporateTrainingComponent } from './trainings/corporate-training/corporate-training.component';
 import { BootcampTrainingComponent } from './trainings/bootcamp-training/bootcamp-training.component';
 import { CampusTrainingComponent } from './trainings/campus-training/campus-training.component';
+import { FrontendWithAngularComponent } from './courses/frontend-with-angular/frontend-with-angular.component';
+import { FrontendWithReactjsComponent } from './courses/frontend-with-reactjs/frontend-with-reactjs.component';
+import { FullstackWithMeanComponent } from './courses/fullstack-with-mean/fullstack-with-mean.component';
+import { FullstackWithMernComponent } from './courses/fullstack-with-mern/fullstack-with-mern.component';
 
 
 @NgModule({
@@ -20,7 +24,11 @@ import { CampusTrainingComponent } from './trainings/campus-training/campus-trai
     TopicContentComponent,
     CorporateTrainingComponent,
     BootcampTrainingComponent,
-    CampusTrainingComponent
+    CampusTrainingComponent,
+    FrontendWithAngularComponent,
+    FrontendWithReactjsComponent,
+    FullstackWithMeanComponent,
+    FullstackWithMernComponent
   ],
   imports: [
     CommonModule,

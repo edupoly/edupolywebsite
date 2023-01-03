@@ -1,3 +1,7 @@
+import { FullstackWithMernComponent } from './main/courses/fullstack-with-mern/fullstack-with-mern.component';
+import { FullstackWithMeanComponent } from './main/courses/fullstack-with-mean/fullstack-with-mean.component';
+import { FrontendWithReactjsComponent } from './main/courses/frontend-with-reactjs/frontend-with-reactjs.component';
+import { FrontendWithAngularComponent } from './main/courses/frontend-with-angular/frontend-with-angular.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './main/home/home.component';
@@ -15,7 +19,23 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:"tutorials",
+    path:"frontend-with-angular",
+    component: FrontendWithAngularComponent
+  },
+  {
+    path: "frontend-with-reactjs",
+    component: FrontendWithReactjsComponent
+  },
+  {
+    path: "fullstack-with-mean",
+    component: FullstackWithMeanComponent
+  },
+  {
+    path: "fullstack-with-mern",
+    component: FullstackWithMernComponent
+  },
+  {
+    path: "tutorials",
     component: TechnologiesComponent
   },
   {
