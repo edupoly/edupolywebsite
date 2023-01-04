@@ -1,0 +1,62 @@
+.fs-mean {
+    margin-top: 120px;
+}
+
+.accordion-button {
+    font-weight: 900;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-item:first-of-type {
+    border-top-left-radius: 0.55rem;
+    border-top-right-radius: 0.55rem;
+
+    & .accordion-button {
+        border-top-left-radius: 0.55rem;
+        border-top-right-radius: 0.55rem;
+    }
+}
+
+.accordion-item:last-of-type {
+    border-bottom-right-radius: 0.55rem;
+    border-bottom-left-radius: 0.55rem;
+
+    & .accordion-button.collapsed {
+        border-bottom-right-radius: 0.55rem;
+        border-bottom-left-radius: 0.55rem;
+    }
+
+    & .accordion-collapse {
+        border-bottom-right-radius: 0.55rem;
+        border-bottom-left-radius: 0.55rem;
+    }
+
+    & .accordion-body {
+        border-bottom-right-radius: 0.55rem;
+        border-bottom-left-radius: 0.55rem;
+    }
+}
+
+.projects::after {
+    background-image: none;
+}
+
+@media(max-width:576px) {
+
+    .accordion-button,
+    .accordion-body li {
+        font-size: 12px;
+    }
+
+    .accordion-body {
+        padding: 12px 16px;
+
+        & ul {
+            margin: 0;
+            padding-left: 1rem;
+        }
+    }
+}
