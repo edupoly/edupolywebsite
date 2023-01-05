@@ -27,4 +27,12 @@ export class HeaderComponent implements OnInit {
     this.clearCurrentUrlData();
   }
 
+  openContactUsModal(template: TemplateRef<any>) {
+    this.modalRef?.hide();
+    this.modalRef = this.modalService.show(template);
+    this.clearCurrentUrlData();
+  }
+
+  
+
 }

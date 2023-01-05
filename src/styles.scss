@@ -20,6 +20,20 @@ body {
     }
 }
 
+iframe{
+        scrollbar-width: thin;
+            scrollbar-color: rgb(190, 190, 190) none;
+        
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background-color: rgb(190, 190, 190);
+                border-radius: 5px;
+            }
+}
+
 .nav-bar {
     .offcanvas-backdrop {
         opacity: 0;

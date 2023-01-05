@@ -1,94 +1,145 @@
 <div class="header d-flex justify-content-between align-items-center">
-    <div class="d-flex justify-content-between">
-        <button class="btn logo btn-primary animate-down-2" (click)="clearCurrentUrlData()"><a class="text-secondary d-flex justify-content-between align-items-center"
-                routerLink=""><img height="40px" src="assets/website logo.png" alt=""></a></button>
-        <button class="btn btn-primary mx-2 d-inline-block d-md-none d-lg-none d-xl-none"
-            (click)="openMenuModal(menuModal)">Menu</button>
-    </div>
-    <div class="d-none d-md-flex">
-        <div class="dropdown ms-3">
-            <!--=== dropdown starts ===-->
-            <button class="btn btn-primary dropdown-toggle" type="button" id="coursesDropDown" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Courses
-                <span class="fas fa-angle-down dropdown-arrow"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="coursesDropDown">
-                <li><a class="dropdown-item" routerLink="frontend-with-angular" (click)="clearCurrentUrlData()">Frontend with Angular</a></li>
-                <li><a class="dropdown-item" routerLink="frontend-with-reactjs" (click)="clearCurrentUrlData()">Frontend with React</a></li>
-                <li><a class="dropdown-item" routerLink="fullstack-with-mean" (click)="clearCurrentUrlData()">Full Stack with MEAN</a></li>
-                <li><a class="dropdown-item" routerLink="fullstack-with-mern" (click)="clearCurrentUrlData()">Full Stack with MERN</a></li>
-            </ul>
+        <div class="d-flex justify-content-between">
+                <button class="btn logo btn-primary animate-down-2" (click)="clearCurrentUrlData()"><a
+                                class="text-secondary d-flex justify-content-between align-items-center"
+                                routerLink=""><img height="40px" src="assets/website logo.png" alt=""></a></button>
+                <button class="btn btn-primary mx-2 d-inline-block d-md-none d-lg-none d-xl-none"
+                        (click)="openMenuModal(menuModal)">Menu</button>
         </div>
-        <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2"
-                (click)="clearCurrentUrlData()">Tutorials</button></a>
-        <div class="dropdown ms-3">
-            <!--=== dropdown starts ===-->
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Trainings
-                <span class="fas fa-angle-down dropdown-arrow"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" routerLink="corporate-training" (click)="clearCurrentUrlData()">Corporate Training</a></li>
-                <li><a class="dropdown-item" routerLink="bootcamp-training" (click)="clearCurrentUrlData()">Bootcamp Training</a></li>
-            </ul>
-        </div>
-        <button class="btn btn-block btn-primary mb-2">Contact Us</button>
+        <div class="d-none d-md-flex">
+                <div class="dropdown ms-3">
+                        <!--=== dropdown starts ===-->
+                        <button class="btn btn-primary dropdown-toggle animate-down-2" type="button"
+                                id="coursesDropDown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Courses
+                                <span class="fas fa-angle-down dropdown-arrow"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="coursesDropDown">
+                                <li><a class="dropdown-item" routerLink="frontend-with-angular"
+                                                (click)="clearCurrentUrlData()">Frontend
+                                                with Angular</a></li>
+                                <li><a class="dropdown-item" routerLink="frontend-with-reactjs"
+                                                (click)="clearCurrentUrlData()">Frontend
+                                                with React</a></li>
+                                <li><a class="dropdown-item" routerLink="fullstack-with-mean"
+                                                (click)="clearCurrentUrlData()">Full Stack
+                                                with MEAN</a></li>
+                                <li><a class="dropdown-item" routerLink="fullstack-with-mern"
+                                                (click)="clearCurrentUrlData()">Full Stack
+                                                with MERN</a></li>
+                        </ul>
+                </div>
+                <a routerLink="tutorials">
+                        <button class="btn btn-primary ms-3 animate-down-2"
+                                (click)="clearCurrentUrlData()">Tutorials</button>
+                </a>
+                <div class="dropdown ms-3">
+                        <!--=== dropdown starts ===-->
+                        <button class="btn btn-primary dropdown-toggle animate-down-2" type="button"
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Trainings
+                                <span class="fas fa-angle-down dropdown-arrow"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" routerLink="corporate-training"
+                                                (click)="clearCurrentUrlData()">Corporate
+                                                Training</a></li>
+                                <li><a class="dropdown-item" routerLink="bootcamp-training"
+                                                (click)="clearCurrentUrlData()">Bootcamp
+                                                Training</a></li>
+                        </ul>
+                </div>
+                <a routerLink="tutorials">
+                        <button class="btn btn-primary ms-3 animate-down-2"
+                                (click)="openMenuModal(contactFormModal)">Contact
+                                Us</button>
+                </a>
 
-        <!--=== dropdown ends ===-->
+                <!--=== dropdown ends ===-->
 
-        <!-- <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2"
+                <!-- <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2"
                 (click)="clearCurrentUrlData()">Blog</button></a>
         <a routerLink="tutorials"><button class="btn btn-primary ms-3 animate-down-2"
                 (click)="clearCurrentUrlData()">Jobs</button></a> -->
-    </div>
+        </div>
 </div>
 
 <ng-template #menuModal>
-    <div class="modal-content shadow-soft">
-        <div class="modal-body d-flex flex-column align-items-center">
-            <div class="dropdown ms-3">
-                <!--=== dropdown starts ===-->
-                <button class="btn btn-primary dropdown-toggle" type="button" id="coursesDropDown" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Courses
-                    <span class="fas fa-angle-down dropdown-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="coursesDropDown">
-                    <li><a class="dropdown-item" routerLink="frontend-with-angular" (click)="clearCurrentUrlData()">Frontend with
-                            Angular</a></li>
-                    <li><a class="dropdown-item" routerLink="frontend-with-reactjs" (click)="clearCurrentUrlData()">Frontend with
-                            React</a></li>
-                    <!-- <li><a class="dropdown-item" routerLink="fullstack-with-mean" (click)="clearCurrentUrlData()">Full Stack with
+        <div class="modal-content shadow-soft">
+                <div class="modal-body d-flex flex-column align-items-center">
+                        <div class="dropdown ms-3">
+                                <!--=== dropdown starts ===-->
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="coursesDropDown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Courses
+                                        <span class="fas fa-angle-down dropdown-arrow"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="coursesDropDown">
+                                        <li><a class="dropdown-item" routerLink="frontend-with-angular"
+                                                        (click)="clearCurrentUrlData()">Frontend with
+                                                        Angular</a></li>
+                                        <li><a class="dropdown-item" routerLink="frontend-with-reactjs"
+                                                        (click)="clearCurrentUrlData()">Frontend with
+                                                        React</a></li>
+                                        <li><a class="dropdown-item" routerLink="fullstack-with-mean"
+                                                        (click)="clearCurrentUrlData()">Full
+                                                        Stack
+                                                        with MEAN</a></li>
+                                        <li><a class="dropdown-item" routerLink="fullstack-with-mern"
+                                                        (click)="clearCurrentUrlData()">Full
+                                                        Stack
+                                                        with MERN</a></li>
+                                        <!-- <li><a class="dropdown-item" routerLink="fullstack-with-mean" (click)="clearCurrentUrlData()">Full Stack with
                             MEAN</a></li>
                     <li><a class="dropdown-item" routerLink="fullstack-with-mern" (click)="clearCurrentUrlData()">Full Stack with
                             MERN</a></li> -->
-                </ul>
-            </div>
-            <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
-                    (click)="modalRef?.hide()">Tutorials</button></a>
-            <!-- <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
+                                </ul>
+                        </div>
+                        <a routerLink="tutorials"><button class="btn btn-block btn-primary"
+                                        (click)="modalRef?.hide()">Tutorials</button>
+                        </a>
+                        <!-- <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
                     (click)="modalRef?.hide()">Trainings</button></a> -->
-            <div class="dropdown ms-3">
-                <!--=== dropdown starts ===-->
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Trainings
-                    <span class="fas fa-angle-down dropdown-arrow"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" routerLink="corporate-training" (click)="clearCurrentUrlData()">Corporate
-                            Training</a></li>
-                    <li><a class="dropdown-item" routerLink="bootcamp-training" (click)="clearCurrentUrlData()">Bootcamp
-                            Training</a></li>
-                </ul>
+                        <div class="dropdown ms-3">
+                                <!--=== dropdown starts ===-->
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Trainings
+                                        <span class="fas fa-angle-down dropdown-arrow"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" routerLink="corporate-training"
+                                                        (click)="clearCurrentUrlData()">Corporate
+                                                        Training</a></li>
+                                        <li><a class="dropdown-item" routerLink="bootcamp-training"
+                                                        (click)="clearCurrentUrlData()">Bootcamp
+                                                        Training</a></li>
+                                </ul>
 
-            </div>
-           <!--  <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
+                        </div>
+                        <a routerLink="tutorials"><button class="btn btn-block btn-primary"
+                                        (click)="openContactUsModal(contactFormModal)">Contact Us</button>
+                        </a>
+                        <!--  <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
                     (click)="modalRef?.hide()">Blog</button></a>
             <a routerLink="tutorials"><button class="btn btn-block btn-primary mb-2"
                     (click)="modalRef?.hide()">Jobs</button></a> -->
+                </div>
         </div>
-    </div>
+</ng-template>
+
+<ng-template #contactFormModal>
+        <div class="modal-content shadow-soft">
+                <div class="modal-header">
+                        <h4 class="modal-title pull-left">Edupoly - Contact Us</h4>
+                        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+                                <span aria-hidden="true" class="visually-hidden">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-center">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNKhTFKU0TWAnlemwQTdL-VLEdpYUUOVG8fRQ1V9RWYLNAhA/viewform?embedded=true"
+                                width="640" height="1007" frameborder="0" marginheight="0"
+                                marginwidth="0">Loading…</iframe>
+                </div>
+        </div>
 </ng-template>
