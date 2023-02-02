@@ -4,6 +4,10 @@
 
 .accordion-button {
     font-weight: 900;
+
+    & a {
+        font-weight: 900;
+    }
 }
 
 .accordion-button:focus {
@@ -40,7 +44,7 @@
     }
 }
 
-.projects::after{
+.projects::after {
     background-image: none;
 }
 

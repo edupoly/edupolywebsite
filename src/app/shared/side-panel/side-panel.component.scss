@@ -8,12 +8,11 @@
     scrollbar-color: rgb(190, 190, 190) none;
 
     &::-webkit-scrollbar {
-        width: 8px;              
+        width: 8px;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: rgb(190, 190, 190);    
-        border-radius: 20px;       
-          
+        background-color: rgb(190, 190, 190);
+        border-radius: 20px;
     }
 }
 
@@ -57,5 +56,5 @@
 }
 
 .cursor-pointer{
-    cursor: pointer;    
+    cursor: pointer;
 }
