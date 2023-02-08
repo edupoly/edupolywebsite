@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="concept mb-2 shadow-inset rounded p-2" *ngFor="let concept of allConcepts">
             <h5 class="text-black p-sp m-0">CSS</h5>
             <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
@@ -50,7 +50,8 @@
                     <div class="topic-link"><a href="2.CSS/2.box-model/box-model.html">Box model</a></div>
                 </div>
                 <div class="list-group-item p-0">
-                    <div class="topic-link"><a href="2.CSS/3.basic-selectors/basic-selectors.html">Basic selectors</a></div>
+                    <div class="topic-link"><a href="2.CSS/3.basic-selectors/basic-selectors.html">Basic selectors</a>
+                    </div>
                 </div>
                 <div class="list-group-item p-0">
                     <div class="topic-link"><a href="2.CSS/4.flex-and-grid/flex-and-grid.html">Flex and grid</a></div>
@@ -73,7 +74,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="concept mb-2 shadow-inset rounded p-2">
             <h5 class="text-black p-sp m-0">JavaScript</h5>
             <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
@@ -82,7 +83,8 @@
                 </div>
                 <div class="list-group-item p-0">
                     <div class="topic-link"><a
-                            href="3.JavaScript/2.statements-and-loops/statements-and-loops.html">Statements and loops</a>
+                            href="3.JavaScript/2.statements-and-loops/statements-and-loops.html">Statements and
+                            loops</a>
                     </div>
                 </div>
                 <div class="list-group-item p-0">
@@ -93,54 +95,209 @@
                     <div class="topic-link"><a href="3.JavaScript/4.functions/functions.html">Functions</a></div>
                 </div>
                 <div class="list-group-item p-0">
-                    <div class="topic-link"><a href="3.JavaScript/5.dom-and-events/dom-and-events.html">DOM and events</a>
+                    <div class="topic-link"><a href="3.JavaScript/5.dom-and-events/dom-and-events.html">DOM and
+                            events</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="main">
-        <h1>Text formatting</h1>
+        <h1>Javascript Basic Coding Introduction Practice assignments</h1>
         <ol>
             <li>
-                <h2>Element</h2>
-                <p>Create an HTML file and add a heading tag(h1) which displays "Welcome to HTML world".</p>
-                <img src="1.HTML/1.text-formatting/images/html-element.JPG" alt="">
-            </li>
-            <li>
-                <h2>Attribute</h2>
-                <p>Create a heading tag(h1) with some text(for example "Welcome to HTML World") and use the title attribute to display some text (for example "its a great journey") when we put our mouse over the heading text.</p>
-                <img src="1.HTML/1.text-formatting/images/html-attribute.png" alt="">
-            </li>
-            <li>
-                <h2>Nested elements</h2>
-                <p>Create an h1 tag with some text and horizontally align it at centre by nesting the h1 element in a center element.</p>
-                <img src="1.HTML/1.text-formatting/images/html-nested-elements.JPG" alt="">
-            </li>
-            <li>
-                <h2>Page title</h2>
-                <p>Create an HTML page and add a title element in the head section with some text so that it appears in the tab as shown in the image.</p>
-                <img src="1.HTML/1.text-formatting/images/html-pagetitle.JPG" alt="">
-            </li>
-            <li>
-                <h2>Basic text formatting</h2>
-                <p>Create an HTML file and create headings from h1 to h6 with some text.</p>
-                <img src="1.HTML/1.text-formatting/images/html-format-text.JPG" alt="">
-            </li>
-            <li>
-                <h2>Advanced text formatting</h2>
-                <p>Create a webpage using b,i,sup,sub,center elements as shown in the image.</p>
-                <img src="1.HTML/1.text-formatting/images/html-format-text-more.JPG" alt="">
-            </li>
-            <li>
-                <h2>Blockquotes</h2>
-                <p>Create a webpage as shown in the image using proper heading elements and blockquote elements.</p>
-                <img src="1.HTML/1.text-formatting/images/html-format-text-blockquote.JPG" alt="">
-            </li>
-            <li>
-                <h2>Text formatting using pre</h2>
-                <p>Create a webpage and display some content using the pre element as shown in the image.</p>
-                <img src="1.HTML/1.text-formatting/images/html-format-text-pre.JPG" alt="">
+                <strong>Basic Functions</strong>
+                <ol>
+                    <li class="nested">
+                        <strong>
+                            Write a function which can return the sum of two numbers.
+                        </strong>
+                        <pre>
+                            function add(a,b){
+                                …………………
+                            }
+                            var sum = add(45,67);
+                            console.log(sum);
+                            //Expected output: 112
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        <strong>
+                            Write a function which can return the greatest of the three numbers passed in arguments.
+                        </strong>
+                        <pre>
+                            function compare(a,b,c){
+                                …………………
+                            }
+                            var greatest = compare(45,67,23);
+                            console.log(greatest);//67
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        <strong>
+                            Write a function which can print the given arguments in ascending order.
+                        </strong>
+                        <pre>
+                            
+                            function sortNums(a,b,c){
+                            …………………
+                            }
+                            var ascending = sortNums(45,7,68);
+                            console.log(ascending);//
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        <strong>
+                            Write a function which can return the factorial of a number.
+                        </strong>
+                        <pre>
+                            
+                            function fact(a){
+                            …………………
+                            }
+                            var factorial = fact(4);
+                            console.log(factorial);
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        <strong>
+                            Write a function which can to return the reverse of a given number.
+                        </strong>
+                        <pre>
+                            function rev(a){
+                            …………………
+                            }
+                            var reverse = rev(4);
+                            console.log(reverse);
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        Write a function which can check a given number is prime number or not
+                    </li>
+                    <li class="nested">
+                        Write a function which can check a given number is palindrome or not            
+                    </li>
+                    <li class="nested">   
+                        Write a function to return the number of digits in the given number         
+                    </li>
+                    <li class="nested">  
+                        Write a function that prints all even numbers between 1 and 20.          
+                    </li>
+                    <li class="nested">    
+                        Write a function which can add two numbers
+                    </li>
+                    <li class="nested">       
+                        Write a function which can display the greatest of the three numbers passed in arguments.     
+                    </li>
+                    <li class="nested">
+                        Write a function which can display the given arguments in ascending order            
+                    </li>
+                    <li class="nested">  
+                        Write a function which can display the factorial of a number          
+                    </li>
+                    <li class="nested">    
+                        Write a function which can to display the reverse of a given number        
+                    </li>
+                    <li class="nested">     
+                        Write a function which can check a given number is palindrome or not       
+                    </li>
+                    <li class="nested">  
+                        Write a function which can check a given number is prime number or not          
+                    </li>
+                    <li class="nested">  
+                        Write a function which can check a given number is armstrong number or not          
+                    </li>
+                    <li class="nested">   
+                        Write a function which can return the factorial of a number to another variable         
+                    </li>
+                    <li class="nested"> 
+                        Write a function to display the number of digits in the given number           
+                    </li>
+                    <li class="nested">            
+                        Write a function that returns an array of all even numbers between 1 and 20.
+                    </li>
+                    <li class="nested">   
+                        Cube of any number using the function.         
+                    </li>
+                    <li class="nested">    
+                        Find diameter, circumference and area of a circle using functions.        
+                    </li>
+                    <li class="nested">     
+                        Maximum and minimum between two numbers using functions.       
+                    </li>
+                    <li class="nested"> 
+                        Check whether a number is even or odd using functions.           
+                    </li>
+                    <li class="nested">      
+                        Check whether a number is prime, Armstrong or perfect number using functions.      
+                    </li>
+                    <li class="nested">           
+                        Find all prime numbers between the given interval using functions. 
+                    </li>
+                    <li class="nested"> 
+                        Print all strong numbers between the given interval using functions.           
+                    </li>
+                    <li class="nested">       
+                        Armstrong numbers between the given interval using functions.     
+                    </li>
+                    <li class="nested">  
+                        Print all perfect numbers between the given interval using functions.          
+                    </li>
+                    <li class="nested">      
+                        Find the power of any number using recursion.      
+                    </li>
+                    <li class="nested">     
+                        Print all natural numbers between 1 to n using recursion.       
+                    </li>
+                    <li class="nested"> 
+                        Print all even or odd numbers in a given range using recursion.           
+                    </li>
+                    <li class="nested">       
+                        Sum of all natural numbers between 1 to n using recursion.     
+                    </li>
+                    <li class="nested">         
+                        Find the sum of all even or odd numbers in a given range using recursion.   
+                    </li>
+                    <li class="nested"> 
+                        Find reverse of any number using recursion.           
+                    </li>
+                    <li class="nested">          
+                        Check whether a number is a palindrome or not using recursion.  
+                    </li>
+                    <li class="nested">        
+                        Find the sum of digits of a given number using recursion.    
+                    </li>
+                    <li class="nested">    
+                        Find factorial of any number using recursion.        
+                    </li>
+                    <li class="nested">  
+                        Generate nth Fibonacci term using recursion.          
+                    </li>
+                    <li class="nested">          
+                        Find gcd (HCF) of two numbers using recursion.  
+                    </li>
+                    <li class="nested">    
+                        Find lcm of two numbers using recursion.        
+                    </li>
+                    <li class="nested">   
+                        Display all array elements using recursion.         
+                    </li>
+                    <li class="nested">        
+                        Find the sum of elements of the array using recursion.    
+                    </li>
+                    <li class="nested">         
+                        Find maximum and minimum elements in an array using recursion.   
+                    </li>
+                    <li>
+                        implement all the Array Assignments using Array Methods
+                    </li>
+                    <li>
+                        implement all the Object Assignments and Array of Object Assignments
+                    </li>
+                    <li>
+                        impletement string assingments using string methods
+                    </li>
+                </ol>
             </li>
         </ol>
     </div>

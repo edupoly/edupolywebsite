@@ -100,47 +100,232 @@
         </div>
     </div>
     <div class="main">
-        <h1>Text formatting</h1>
+        <h1>Working with Document Object</h1>
         <ol>
             <li>
-                <h2>Element</h2>
-                <p>Create an HTML file and add a heading tag(h1) which displays "Welcome to HTML world".</p>
-                <img src="1.HTML/1.text-formatting/images/html-element.JPG" alt="">
+                <p>Generate HTML Elements using document object</p>
+                <iframe src="3.JavaScript/5.dom-and-events/images/1. DOM-ASSIGNMENT.pdf" frameborder="0" width="70%" height="100%"></iframe>
+            </li>
+            <li class="nested">
+                <p>
+                    Generate List Elements using document object for the given Array of Objects
+                </p>
+                <pre>
+                    var students = [
+                                {
+                                name:'jaya',
+                                gender:'female',
+                                place:'gachibowli',
+                                },
+                                {
+                                name:'dasu',
+                                gender:'male',
+                                place:'kphb'
+                                },
+                                {
+                                name:'swati',
+                                gender:'female',
+                                place:'pune'
+                                },
+                                {
+                                name:'pallavi',
+                                gender:'female',
+                                place:'assam'
+                                },
+                                {
+                                name:'kiran',
+                                gender:'male',
+                                place:'kondapur'
+                                },
+                                {
+                                name:'thirumala',
+                                gender:'male',
+                                place:'madhapur'
+                                },
+                                {
+                                name:'priya',
+                                gender:'female',
+                                place:'hitech'
+                                },
+                            ]
+                </pre>
+                Exprected Output:
+                <img src="3.JavaScript/5.dom-and-events/images/2.genui.png" width="100%"></img>
+            </li>
+            <li class="nested">
+                <p>Display the above data like the following image using Javascript DOM Element creation and append
+                </p>
+                <pre>
+                    var students = [		
+                                    {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                            ]
+
+                </pre>
+                <img src="3.JavaScript/5.dom-and-events/images/3.genui-json.png" width="300px" alt="">
+            </li>
+            <li class="nested">
+                <p>
+                    Generate UI using document object for the given Array of Objects
+                </p>
+                <pre>
+                    var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 25000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+                </pre>
+                <ol>                    
+                    <li class="nested">Display all the people's data in a table.</li>
+                    <li class="nested">Display all male and female people in two separate tables.</li>
+                    <li class="nested">Display only those people in a table who are having salaries more than 20000.</li>
+                    <li class="nested">Display only the male people who are above the age of 25.</li>
+                </ol>
+            </li>
+            <li class="nested">
+                <p>Generate UI using document object for the given Array of Objects</p>
+                <pre>
+                    var products = [
+			{
+				"name": "Duracell - AAA Batteries (4-Pack)",
+				"type": "HardGood",
+				"price": 5.49,
+				"category": "Household Batteries",
+				"manufacturer": "Duracell",				
+			},
+			{
+				"name": "Hard Rock TrackPak - Mac",
+				"type": "Software",
+				"price": 29.99,
+				"category": "Recording Equipment",
+				"manufacturer": "Hal Leonard",				
+			},
+			{
+				"name": "Duracell - AA 1.5V CopperTop Batteries (4-Pack)",
+				"type": "HardGood",
+				"price": 5.62,
+				"category": "Household Batteries",
+				"manufacturer": "Duracell",				
+			},
+			{
+				"name": "Energizer - MAX Batteries AA (4-Pack)",
+				"type": "HardGood",
+				"price": 5.32,
+				"category": "Household Batteries",
+				"manufacturer": "Energizer",				
+			},
+			{
+				"name": "METRA - Antenna Cable Adapter - Black",
+				"type": "HardGood",
+				"price": 13.99,
+				"category": "Antennas & Adapters",
+				"manufacturer": "Metra",				
+			},
+			{
+				"name": "WipeDrive Six - Mac|Windows",
+				"type": "Software",
+				"price": 23.99,
+				"category": "Maintenance Software",
+				"manufacturer": "White Canyon",				
+			}
+		];
+                </pre>
+                <ol>
+                    <li>Display all the products in a table</li>
+                    <li>Display only the name and price of each product in a table.</li>
+                    <li>Display all the products in ascending order of their prices.</li>
+                    <li>Display the hardgoods and software in separate tables.</li>
+                </ol>
             </li>
             <li>
-                <h2>Attribute</h2>
-                <p>Create a heading tag(h1) with some text(for example "Welcome to HTML World") and use the title attribute to display some text (for example "its a great journey") when we put our mouse over the heading text.</p>
-                <img src="1.HTML/1.text-formatting/images/html-attribute.png" alt="">
-            </li>
-            <li>
-                <h2>Nested elements</h2>
-                <p>Create an h1 tag with some text and horizontally align it at centre by nesting the h1 element in a center element.</p>
-                <img src="1.HTML/1.text-formatting/images/html-nested-elements.JPG" alt="">
-            </li>
-            <li>
-                <h2>Page title</h2>
-                <p>Create an HTML page and add a title element in the head section with some text so that it appears in the tab as shown in the image.</p>
-                <img src="1.HTML/1.text-formatting/images/html-pagetitle.JPG" alt="">
-            </li>
-            <li>
-                <h2>Basic text formatting</h2>
-                <p>Create an HTML file and create headings from h1 to h6 with some text.</p>
-                <img src="1.HTML/1.text-formatting/images/html-format-text.JPG" alt="">
-            </li>
-            <li>
-                <h2>Advanced text formatting</h2>
-                <p>Create a webpage using b,i,sup,sub,center elements as shown in the image.</p>
-                <img src="1.HTML/1.text-formatting/images/html-format-text-more.JPG" alt="">
-            </li>
-            <li>
-                <h2>Blockquotes</h2>
-                <p>Create a webpage as shown in the image using proper heading elements and blockquote elements.</p>
-                <img src="1.HTML/1.text-formatting/images/html-format-text-blockquote.JPG" alt="">
-            </li>
-            <li>
-                <h2>Text formatting using pre</h2>
-                <p>Create a webpage and display some content using the pre element as shown in the image.</p>
-                <img src="1.HTML/1.text-formatting/images/html-format-text-pre.JPG" alt="">
+                <h2>Assignments on Events</h2>
+                <ol>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/0.insert-text-to-h1.mp4" frameborder="0"></iframe>
+                    </li>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/1.1 color-change-button-click.mp4" frameborder="0"></iframe>
+                    </li>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/1.2 button-bg-toggle.mp4" frameborder="0"></iframe>
+                    </li>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/1.3 color-rotation-on-click.mp4" frameborder="0"></iframe>
+                    </li>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/2.1 button-toggle-boolean-value.mp4" frameborder="0"></iframe>
+                    </li>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/2.2 toggle-button.mp4" frameborder="0"></iframe>
+                    </li>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/2.3 toggle-button-div.mp4" frameborder="0"></iframe>
+                    </li>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/3. likes-dislikes-counter.mp4" frameborder="0"></iframe>
+                    </li>
+                    <li class="nested">
+                        <iframe src="3.JavaScript/5.dom-and-events/images/4. change-div-bg-color.mp4" frameborder="0"></iframe>
+                    </li>
+                </ol>
             </li>
         </ol>
     </div>
