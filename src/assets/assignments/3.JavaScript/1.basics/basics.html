@@ -1,0 +1,436 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/assets/assignments/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="1.HTML/1.text-formatting/text-formatting.css">
+    <link rel="stylesheet" href="neumorphism.css">
+</head>
+
+<body>
+    <div class="side-panel">
+        <div class="concept mb-2 shadow-inset rounded p-2">
+            <h5 class="text-black p-sp m-0">HTML</h5>
+            <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/1.text-formatting/text-formatting.html">Text Formatting</a>
+                    </div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/2.lists/lists.html">Lists</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/3.tables/tables.html">Tables</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/4.forms/forms.html">Forms</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/5.anchors/anchors.html">Anchors</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/6.images/images.html">Images</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/7.projects/projects.html">Projects</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="concept mb-2 shadow-inset rounded p-2" *ngFor="let concept of allConcepts">
+            <h5 class="text-black p-sp m-0">CSS</h5>
+            <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/1.basic-styling/basic-styling.html">Basic styling</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/2.box-model/box-model.html">Box model</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/3.basic-selectors/basic-selectors.html">Basic selectors</a>
+                    </div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/4.flex-and-grid/flex-and-grid.html">Flex and grid</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/5.responsive-design/responsive-design.html">Responsive design
+                            projects</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a
+                            href="2.CSS/6.animations-and-transitions/animations-and-transitions.html">Animations and
+                            transitions</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/7.css-templates/css-templates.html">CSS template projects</a>
+                    </div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/8.questions/questions.html">Questions</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="concept mb-2 shadow-inset rounded p-2">
+            <h5 class="text-black p-sp m-0">JavaScript</h5>
+            <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="3.JavaScript/1.basics/basics.html">Basics</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a
+                            href="3.JavaScript/2.statements-and-loops/statements-and-loops.html">Statements and
+                            loops</a>
+                    </div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="3.JavaScript/3.data-structures/data-structures.html">Data
+                            structures</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="3.JavaScript/4.functions/functions.html">Functions</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="3.JavaScript/5.dom-and-events/dom-and-events.html">DOM and
+                            events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Javascript Basic Coding Introduction Practice assignments</h1>
+        <ol>
+            <li>
+                <h2>Operators and Expressions</h2>
+                
+                <b>Use console.log() and document.write() to print the following</b>
+                <ol>
+                    <li class="nested">
+                        Write a program to print the following output for the given values a=10,b=20
+                        Output expected is: 
+
+                            10+20=30
+                            10-20=-10
+                            10*20=200
+                            10/20=0
+                            10%20=10
+                    </li>
+                    <li class="nested">
+                        Write a program to print the following for a given value  a=3;
+                        Output expected:
+                            3*1=3
+                            3*2=6
+                            3*3=9
+                            3*4=12
+                            3*5=15
+                            3*6=18
+                    </li>
+                </ol>
+
+                <b>Apply Appropriate operators to get the desired results</b>
+                <ol start="3">
+                    <li class="nested">
+                        Given a variable var x = 23. Increment its value by 1.
+                    </li>
+                    <li class="nested">
+                        Print the sum of 12 and 23 using the addition operator.
+                    </li>
+                    <li class="nested">
+                        Print the difference of 52 and 36 using the subtraction operator.
+
+                    </li>
+                    <li class="nested">
+                        Print the product of 23 and 56 using the multiplication operator.
+
+                    </li>
+                    <li class="nested">
+                        Divide 36 by 5 and print the output by using the division operator.
+
+                    </li>
+                    <li class="nested">
+                        Divide 67 by 4 and print the quotient.
+
+                    </li>
+                    <li class="nested">
+
+                        Divide 48 by 7 and print the remainder.
+                    </li>
+                    <li class="nested">
+                        Print the value of 2 raised to the power of 6.
+
+                    </li>
+                    <li class="nested">
+                        Given var x = “Edupoly” and var y = “Training”. Print “Edupoly Training” in the console.
+
+                    </li>
+                    <li class="nested">
+                        Find the perimeter of a square having each side 4cm.
+
+                    </li>
+                    <li class="nested">
+                        Find the perimeter of a rectangle of length 50cm and breadth 35cm.
+
+                    </li>
+                    <li class="nested">
+                        Find the circumference of a circle of radius 20cm. (Take π = 3.14)
+
+                    </li>
+                    <li class="nested">
+                        Find the area of a square having each side 12cm.
+
+                    </li>
+                    <li class="nested">
+                        Find the area of a rectangle of length 25cm and breadth 16cm.
+
+                    </li>
+                    <li class="nested">
+                        Find the area of a circle of radius 3.75cm.
+
+                    </li>
+                    <li class="nested">
+                        Given the marks of 3 subjects as 67,48 and 74. Print the average marks of the 3 subjects.
+
+                    </li>
+                    <li class="nested">
+                        Given the cost of a product as ₹538.56, add 18% GST to it and print the total cost.
+
+                    </li>
+
+                    <li class="nested">
+                        Given a variable var x = 48. Decrement its value by 1.
+                    </li>
+                    <li class="nested">
+                        Write a script to swap two numbers;
+                    </li>
+                    <li class="nested">Write a script to swap two numbers without using 3rd variable
+                        (please use *,%,/ not + and -)</li>
+                    <li class="nested">
+                        Write a program to print the reminder of a division
+                    </li>
+                    <li class="nested">Write a program to print the simple interest rate of given P T R values</li>
+                    <li class="nested">
+                        Write a program to print the simple interest rate of given P T R values
+
+                    </li>
+                    <li class="nested">
+                        Write a program to print the max of given two numbers using ternary operator
+
+                    </li>
+                    <li class="nested">
+                        Write a program to print the max of given three numbers using ternary operator
+
+                    </li>
+                    <li class="nested">Find the area of a square for given length of a side</li>
+                    <li class="nested">
+                        Find the area of a square for given length of a side
+
+                    </li>
+                    <li class="nested">
+                        Find the area of a rectangle for given length and breadth
+
+                    </li>
+                    <li class="nested">
+                        Find the area of a triangle for given base and height
+
+                    </li>
+                    <li class="nested">
+                        Check a given number is even or not using ternary operator
+
+                    </li>
+                    <li class="nested">
+                        Check a given number is odd or not using ternary operator
+
+                    </li>
+                    <li class="nested">
+                        Check a given number is positive or not using ternary operator
+
+                    </li>
+                    <li class="nested">
+                        Check a given number is multiple of 4 or not using ternary operator
+
+                    </li>
+                    <li class="nested">
+                        Print the (a+b)^2 for given a and b values
+
+                    </li>
+                    <li class="nested">
+                        Print the (a+b)^3 for given a and b values
+
+                    </li>
+                    <li class="nested">
+                        Print the (a+b+c)^2 for given a,b and c values
+
+                    </li>
+                    <li class="nested">
+                        Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic
+                        salary, and
+                        house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.
+                    </li>
+                    <li class="nested">
+                        The distance between two cities (in km.) is input through the keyboard. Write a program to
+                        convert and
+                        print this distance in meters, feet, inches and centimeters.
+                    </li>
+                    <li class="nested">
+                        If the marks obtained by a student in five different subjects are input through the keyboard,
+                        find out
+                        the aggregate marks and percentage marks obtained by the student. Assume that the maximum marks
+                        that can
+                        be obtained by a student in each subject is 100.
+                    </li>
+                    <li class="nested">
+                        Temperature of a city in Fahrenheit degrees is input through the keyboard. Write a program to
+                        convert
+                        this temperature into Centigrade degrees.
+                    </li>
+                    <li class="nested">
+                        The length & breadth of a rectangle and radius of a circle are input through the keyboard. Write
+                        a
+                        program to calculate the area & perimeter of the rectangle, and the area & circumference of the
+                        circle.
+                    </li>
+                    <li class="nested">
+                        Two numbers are input through the keyboard into two locations C and D. Write a program to
+                        interchange
+                        the contents of C and D.
+                    </li>
+                    <li class="nested">
+                        If a five-digit number is input through the keyboard, write a program to calculate the sum of
+                        its
+                        digits. (Hint: Use the modulus operator ‘%’)
+                    </li>
+                    <li class="nested">
+                        If a five-digit number is input through the keyboard, write a program to reverse the number.
+                    </li>
+                    <li class="nested">
+                        If a four-digit number is input through the keyboard, write a program to obtain the sum of the
+                        first and
+                        last digit of this number.
+                    </li>
+                    <li class="nested">
+                        In a town, the percentage of men is 52. The percentage of total literacy is 48. If total
+                        percentage of
+                        literate men is 35 of the total population, write a program to find the total number 48 Let Us C
+                        of
+                        illiterate men and women if the population of the town is 80,000.
+                    </li>
+                    <li class="nested">
+                        A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is
+                        input
+                        through the keyboard in hundreds, find the total number of currency notes of each denomination
+                        the
+                        cashier will have to give to the withdrawer.
+                    </li>
+                    <li class="nested">
+                        If the total selling price of 15 items and the total profit earned on them is input through the
+                        keyboard, write a program to find the cost price of one item.
+                    </li>
+                    <li class="nested">
+                        If a five-digit number is input through the keyboard, write a program to print a new number by
+                        adding
+                        one to each of its digits. For example if the number that is input is 12391 then the output
+                        should be
+                        displayed as 23402.
+
+                    </li>
+                    <li class="nested">
+                        Write a program that converts Centigrade to Fahrenheit.
+                        Expected Output :
+                        Input a temperature (in Centigrade): 45
+                        113.000000 degrees Fahrenheit.
+                    </li>
+                    <li class="nested">
+                        Write a JavaScript program that calculates the volume of a sphere.
+                        Expected Output :
+                        Input the radius of the sphere : 2.56
+                        The volume of the sphere is 70.276237.
+                    </li>
+                    <li class="nested">
+                        Write a JavaScript program that prints the perimeter of a rectangle to take its height and width
+                        as input.
+                        Expected Output :
+                        Input the height of the Rectangle : 5
+                        Input the width of the Rectangle : 7
+                        Perimeter of the Rectangle is : 24.000000
+                    </li>
+                    <li class="nested">
+                        Write a JavaScript program that converts kilometers per hour to miles per hour.
+                        Expected Output :
+                        Input kilometers per hour: 15
+                        9.320568 miles per hour
+                    </li>
+                    <li class="nested">
+                        Write a JavaScript program that takes hours and minutes as input, and calculates the total
+                        number of minutes.
+                        Expected Output :
+                        Input hours: 5
+                        Input minutes: 37
+                        Total: 337 minutes.
+                    </li>
+                    <li class="nested">
+                        Write a program in JavaScript that takes minutes as input, and display the total number of hours
+                        and minutes.
+                        Expected Output :
+                        Input minutes: 546
+                        9 Hours, 6 Minutes
+                    </li>
+                    <li class="nested">
+                        Write a program in JavaScript that reads a forename, surname and year of birth and display the
+                        names and the year one after another sequentially.
+                        Expected Output :
+                        Input your firstname: Tom
+                        Input your lastname: Davis
+                        Input your year of birth: 1982
+                        Tom Davis 1982
+                    </li>
+                    <li class="nested">
+                        Write a program in JavaScript to calculate the sum of three numbers with getting input in one
+                        line separated by a comma.
+                        Expected Output :
+                        Input three numbers separated by comma : 5,10,15
+                        The sum of three numbers : 30
+                    </li>
+                    <li class="nested">
+                        Write a JavaScript program to perform addition, subtraction, multiplication and division of two
+                        numbers
+                        Expected Output :
+                        Input any two numbers separated by comma : 10,5
+                        The sum of the given numbers : 15
+                        The difference of the given numbers : 5
+                        The product of the given numbers : 50
+                        The quotient of the given numbers : 2.000000
+                    </li>
+                    <li class="nested">
+                        Write a JavaScript program to find the third angle of a triangle if two angles are given.
+                        Expected Output :
+                        Input two angles of triangle separated by comma : 50,70
+                        Third angle of the triangle : 60
+                    </li>
+                    <li class="nested">
+                        Write a script to display the maximum number in given two numbers using operators
+                    </li>
+                    <li class="nested">
+                        Write a script to display the maximum number in given three numbers using operators
+                    </li>
+                    <li class="nested">
+                        Write a script to display the given two strings in ascending order using operators
+                    </li>
+                    <li class="nested">
+                        <b>Worksheet on Expressions(download and open in ms-word or googledocs and work on it)</b>
+                        <br>
+                        <u><a href="3.JavaScript/1.basics/images/expression-worksheet.docx">Expressions Worksheet</a></u>
+                    </li>
+                </ol>
+
+            </li>
+
+        </ol>
+    </div>
+</body>
+
+</html>
