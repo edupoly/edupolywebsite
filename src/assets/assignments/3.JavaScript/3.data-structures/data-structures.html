@@ -1,0 +1,784 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/assets/assignments/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="1.HTML/1.text-formatting/text-formatting.css">
+    <link rel="stylesheet" href="neumorphism.css">
+</head>
+
+<body>
+    <div class="side-panel">
+        <div class="concept mb-2 shadow-inset rounded p-2">
+            <h5 class="text-black p-sp m-0">HTML</h5>
+            <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/1.text-formatting/text-formatting.html">Text Formatting</a>
+                    </div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/2.lists/lists.html">Lists</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/3.tables/tables.html">Tables</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/4.forms/forms.html">Forms</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/5.anchors/anchors.html">Anchors</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/6.images/images.html">Images</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="1.HTML/7.projects/projects.html">Projects</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="concept mb-2 shadow-inset rounded p-2" *ngFor="let concept of allConcepts">
+            <h5 class="text-black p-sp m-0">CSS</h5>
+            <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/1.basic-styling/basic-styling.html">Basic styling</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/2.box-model/box-model.html">Box model</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/3.basic-selectors/basic-selectors.html">Basic selectors</a>
+                    </div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/4.flex-and-grid/flex-and-grid.html">Flex and grid</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/5.responsive-design/responsive-design.html">Responsive design
+                            projects</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a
+                            href="2.CSS/6.animations-and-transitions/animations-and-transitions.html">Animations and
+                            transitions</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/7.css-templates/css-templates.html">CSS template projects</a>
+                    </div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="2.CSS/8.questions/questions.html">Questions</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="concept mb-2 shadow-inset rounded p-2">
+            <h5 class="text-black p-sp m-0">JavaScript</h5>
+            <div class="list-group list-group-flush bg-primary shadow-soft rounded border-light">
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="3.JavaScript/1.basics/basics.html">Basics</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a
+                            href="3.JavaScript/2.statements-and-loops/statements-and-loops.html">Statements and
+                            loops</a>
+                    </div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="3.JavaScript/3.data-structures/data-structures.html">Data
+                            structures</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="3.JavaScript/4.functions/functions.html">Functions</a></div>
+                </div>
+                <div class="list-group-item p-0">
+                    <div class="topic-link"><a href="3.JavaScript/5.dom-and-events/dom-and-events.html">DOM and
+                            events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Javascript Basic Coding Introduction Practice assignments</h1>
+        <ol>
+            <li>
+
+                <ol>
+                    <strong>Working with Linear Data Structures Arrays</strong>
+                    <li class="nested">
+                        write a script to print all array values in the console.</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,0,4,7]
+                        print all the Array values using a for loop.
+                        Expected output: 23 34 54 0 4 7</li>
+                    <li class="nested">
+                        print all numbers in an array except the first element.
+                        Expected output: 34 54 0 4 7</li>
+                    <li class="nested">
+                        Print all elements in an array except the last element
+                        Expected output: 23 34 54 0 4</li>
+                    <li class="nested">
+                        Print all the numbers from last index to first index
+                        Expected output: 7 4 0 54 34 23</li>
+                    <li class="nested">
+                        Print all the numbers from last index to first index except the first element
+                        Expected output: 4 0 54 34 23 </li>
+                    <li class="nested">
+                        Print all the numbers from last index to first index except the last element
+                        Expected output: 7 4 0 54 34</li>
+                    <li class="nested">
+                        Print only the last 4 elements of an array.
+                        Expected output: 54 0 4 7</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] print the minimum number in an Array.
+                        Expected output: 4</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] print the Maximum number in an array.
+                        Expected output: 54</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] sum of all the numbers in an Array.
+                        Expected output: 132</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] Average of all the numbers in an Array.
+                        Expected output: 22</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] print values that are greater than the given number.
+                        Given number: 20, Expected output: 23,34,54</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] print all the even numbers in an Array.
+                        Expected output: 34,54,10,4</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] print all the odd numbers in an Array.
+                        Expected output: 23,7</li>
+                    <li class="nested">
+                        For the Given array: [23,-34,-54,10,-4,7] print all the positive numbers in an array.
+                        Expected output: 23,10,7</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] search if the given number is there in an array or not.
+                        Given number: 34, Expected output: true
+                        Given number: 26, Expected output: false</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,34,7,23,10,34] print the total number of times an element
+                        found in the array.
+                        Given number: 23, Expected output: 2
+                        Given number: 34, Expected output: 3
+                        Given number: 10, Expected output: 2
+                        Given number: 54, Expected output: 1</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,4,7] print index of a given element in an Array.
+                        Given number: 23, Expected output: 0
+                        Given number: 34, Expected output: 1
+                        Given number: 10, Expected output: 3
+                        Given number: 54, Expected output: 2</li>
+                    <li class="nested">
+                        For the Given array: [23,34,54,10,34,7,23,10,34] eliminate duplicates in a given array
+                        Expected output: 23,34,54,10,7 </li>
+                    <li class="nested">
+                        a program to store an array into another array
+                        var ar = [23,34,54,10,4,7]
+                        var br = [ ]
+                        Expected output: br = [23,34,54,10,4,7]</li>
+                    <li class="nested">
+                        Sort an array in ascending order.
+                        Given array: [23,34,54,10,4,7]
+                        Expected output: 4,7,10,23,34,54 </li>
+                    <li class="nested">
+                        Reduce the each element of the array by 25% and store in a separate array.</li>
+                    <li class="nested">
+                        Store only even numbers of a given array in another array.</li>
+                    <li class="nested">
+                        create a duplicate array for a given array.</li>
+                    <li class="nested">
+                        Eliminate duplicates from a array</li>
+                    <li class="nested">
+                        print only the perfect squares in an array</li>
+                    <li class="nested">
+                        Print only the 2 digit numbers from an array</li>
+                    <li class="nested">
+                        Print only multiples of 5 from an array</li>
+                    <li class="nested">
+                        Print only multiples of 2 AND 3 from an array</li>
+                    <li class="nested">
+                        Print only multiples of 3 OR 5 from an array</li>
+                    <li class="nested">
+                        Increment 5% for all the salaries in a given array</li>
+                    <li class="nested">
+                        For every basic salary present in the array, add 40% HRA, 92% DA, 10% Tax and display the final
+                        output</li>
+                    <li class="nested">
+                        For every salary, deduct 10% tax for salaries less than 50000 and deduct 12% tax for salaries
+                        more than 50000</li>
+                    <li class="nested">
+                        Print only those odd numbers in a given array which are divisible by 3.</li>
+                    <li class="nested">
+                        Insert first 10 odd numbers in an empty array(for and while).</li>
+                    <li class="nested">
+                        Print the elements present in the second half of the array.</li>
+                    <li class="nested">
+                        Print the greatest of all 2-digit numbers present in an array.</li>
+                    <li class="nested">
+                        Write a program to remove elements from an array which are not in the ascending order
+                        Ex:
+                        Original array: [12,34,11,56,37,98,23,67,109,45]
+                        Output : [12,34,56,98,109]</li>
+                    <li class="nested">
+                        Write a program to sort the array based on the number of occurrences of elements
+                        Ex: original array: [1,2,5,6,2,1,6,1,2,6,2,1,2];
+                        After the logic:
+                        [5,6,6,6,1,1,1,1,2,2,2,2,2];
+                        //5 occurred one time,6 three times,1 occurred 4 times, 2 occurred 5 times</li>
+                    <li class="nested">
+                        <pre>
+                            var ar = [19,12,23,4,15];
+                            var br = [26,37,18,79,10];
+                            a)Write script to merge array as the values of ar in the first and values of br next
+                                Expected output: [19,12,23,4,15,26,37,18,79,10];
+                            b)Write script to merge array as the values of ar in the first and values of br next
+                                Expected output: [26,37,18,79,10,19,12,23,4,15];
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        <pre>
+                            var ar = [1,2,3,7,8,9];
+                            var br = [4,5,6];
+                            Expected output: [1,2,3,4,5,6,7,8,9];
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        insert An Element Desired or Specific Position In An Array</li>
+                    <li class="nested">
+                        Remove Duplicates Items In An Array</li>
+                    <li class="nested">
+                        Delete Element From Array At Desired Or Specific Position</li>
+                    <li class="nested">
+                        Check String Is Palindrome Or Not Using For Loop
+                    </li>
+                    <li class="nested">
+                        Convert All Input String Simultaneously Into Asterisk ( * )
+                    </li>
+                    <li class="nested">
+                        Read and print elements of the array. – using recursion.
+                    </li>
+                    <li class="nested">
+                        Print all negative elements in an array.
+                    </li>
+                    <li class="nested">
+                        Sum of all array elements. – using recursion.
+                    </li>
+                    <li class="nested">
+                        Find a maximum and minimum element in an array. – using recursion.
+                    </li>
+                    <li class="nested">
+                        Get the second largest element in an array.
+                    </li>
+                    <li class="nested">
+                        Count the total number of even and odd elements in an array.
+                    </li>
+                    <li class="nested">
+                        Count the total number of negative elements in an array.
+                    </li>
+                    <li class="nested">
+                        Copy all elements from an array to another array.
+                    </li>
+                    <li class="nested">
+                        Insert an element in an array.
+                    </li>
+                    <li class="nested">
+                        Delete an element from an array at the specified position.
+                    </li>
+                    <li class="nested">
+                        Count frequency of each element in an array.
+                    </li>
+                    <li class="nested">
+                        Print all unique elements in the array.
+                    </li>
+                    <li class="nested">
+                        Count the total number of duplicate elements in an array.
+                    </li>
+                    <li class="nested">
+                        Delete all duplicate elements from an array.
+                    </li>
+                    <li class="nested">
+                        Merge two arrays to the third array.
+                    </li>
+                    <li class="nested">
+                        Find the reverse of an array.
+                    </li>
+                    <li class="nested">
+                        Put even and odd elements of an array in two separate arrays.
+                    </li>
+                    <li class="nested">
+                        Search an element in an array.
+                    </li>
+                    <li class="nested">
+                        Sort array elements in ascending or descending order.
+                    </li>
+                    <li class="nested">
+                        Sort even and odd elements of the array separately.
+                    </li>
+                    <li class="nested">
+                        Right rotate an array.
+                    </li>
+                    
+                    <strong>Working with Object Literals </strong>
+                    <li class="nested">
+                        <strong>For the given marks object solve the following </strong>
+                        <pre>
+                            var marks = {
+                                "maths" : 34,
+                                "english" : 56,
+                                "science": 32,
+                                "hindi" : 75,
+                                "social science": 65
+                                };
+                        </pre>
+                        <ol>
+                            <li class="nested">
+                                Print the marks of all the subjects.
+                            </li>
+                            <li class="nested">
+                                Print the names of all the subjects from the given object.
+                            </li>
+                            <li class="nested">
+                                Count the number of subjects from the given object.
+                            </li>
+                            <li class="nested">
+                                Print the percentage of the marks of the student.
+                            </li>
+                            <li class="nested">
+                                Print only those subjects where the student scored more than 35.
+                            </li>
+                            <li class="nested">
+                                Print the pass/fail status of the subjects provided 35 is the pass mark.
+                            </li>
+                            <li class="nested">
+                                Print only the passed subjects.
+                            </li>
+                            <li class="nested">
+                                Count the number of passed subjects.
+                            </li>
+                            <li class="nested">
+                                Print only the failed subjects.
+                            </li>
+                            <li class="nested">
+                                Count the number of failed subjects.
+                            </li>
+                            <li class="nested">
+                                Print the least scored subject.
+                            </li>
+                            <li class="nested">
+                                Print the highest scored subject.
+                            </li>
+                            <li class="nested">
+                                Check whether the student has passed in all the subjects or not.
+                            </li>
+                            <li class="nested">
+                                Take the subject name from the student through prompt box and print the subject marks
+                                and pass/fail status.
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="nested">
+                        <strong>For the given Object Solve the following</strong>
+                        <pre>
+                            var products = [
+                            {
+                                "name": "Duracell - AAA Batteries (4-Pack)",
+                                "type": "HardGood",
+                                "price": 5.49,
+                                "category": "Household Batteries",
+                                "manufacturer": "Duracell",				
+                            },
+                            {
+                                "name": "Hard Rock TrackPak - Mac",
+                                "type": "Software",
+                                "price": 29.99,
+                                "category": "Recording Equipment",
+                                "manufacturer": "Hal Leonard",				
+                            },
+                            {
+                                "name": "Duracell - AA 1.5V CopperTop Batteries (4-Pack)",
+                                "type": "HardGood",
+                                "price": 5.62,
+                                "category": "Household Batteries",
+                                "manufacturer": "Duracell",				
+                            },
+                            {
+                                "name": "Energizer - MAX Batteries AA (4-Pack)",
+                                "type": "HardGood",
+                                "price": 5.32,
+                                "category": "Household Batteries",
+                                "manufacturer": "Energizer",				
+                            },
+                            {
+                                "name": "METRA - Antenna Cable Adapter - Black",
+                                "type": "HardGood",
+                                "price": 13.99,
+                                "category": "Antennas & Adapters",
+                                "manufacturer": "Metra",				
+                            },
+                            {
+                                "name": "WipeDrive Six - Mac|Windows",
+                                "type": "Software",
+                                "price": 23.99,
+                                "category": "Maintenance Software",
+                                "manufacturer": "White Canyon",				
+                            }
+                        ];
+                        </pre>
+                        <ol>
+                            <li class="nested">
+                                Print all the product names.</li>
+                            <li class="nested">
+                                Print all the hardgoods.</li>
+                            <li class="nested">
+                                Print all the softwares.</li>
+                            <li class="nested">
+                                Print all the categories.</li>
+                            <li class="nested">
+                                Print only the products manufactured by Duracell.</li>
+                            <li class="nested">
+                                Print the product names in ascending order of their prices.</li>
+                            <li class="nested">
+                                Print only those products whose price is more than 14.99.</li>
+                            <li class="nested">
+                                Print only those products whose price is less than 9.99.</li>
+                            <li class="nested">
+                                Print the total price of all the hardgoods.</li>
+                            <li class="nested">
+                                Print the average price of the softwares.</li>
+                        </ol>
+                    </li>
+                    <li class="nested">
+                        <strong></strong>
+                        <pre>
+                            var people = [
+                            {
+                            "firstname": "praveen",
+                            "lastname": "gubbala",
+                            "age": 36,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 10000
+                            },
+                            {
+                            "firstname": "srikanth",
+                            "lastname": "gubbala",
+                            "age": 32,
+                            "gender": "male",
+                            "city": "bengaluru",
+                            "salary": 20000
+                            },
+                            {
+                            "firstname": "pradeep",
+                            "lastname": "reddy",
+                            "age": 21,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 25000
+                            },
+                            {
+                            "firstname": "mounika",
+                            "lastname": "mudiraj",
+                            "age": 20,
+                            "gender": "female",
+                            "city": "nalgonda",
+                            "salary": 30000
+                            },
+                            {
+                            "firstname": "nikhil",
+                            "lastname": "m",
+                            "age": 22,
+                            "gender": "male",
+                            "city": "guntur",
+                            "salary": 2000
+                            },
+                            {
+                            "firstname": "riya",
+                            "lastname": "bhadouria",
+                            "age": 14,
+                            "gender": "female",
+                            "city": "indore",
+                            "salary": 40000
+                            }
+                            ];
+
+
+                        </pre>
+                        <ol>
+                            <li class="nested">
+                                Print all the firstnames.</li>
+                            <li class="nested">
+                                Print all the full names.</li>
+                            <li class="nested">
+                                Print only those names whose age is more than 25.</li>
+                            <li class="nested">
+                                Print all female names.</li>
+                            <li class="nested">
+                                Print only those names whose salary is more than 25000 and increase their salaries by
+                                15%.</li>
+                            <li class="nested">
+                                Using prompt, print only those names whose city is "hyd".</li>
+                            <li class="nested">
+                                Print the total salary of all the people.</li>
+                            <li class="nested">
+                                Print all the female names.</li>
+                            <li class="nested">
+                                Print all the firstnames whose salary is more than 25000.</li>
+                            <li class="nested">
+                                Using prompt, print all names whose city is "hyd".</li>
+                            <li class="nested">
+                                Print all the fullnames in the alphabetical order.</li>
+                            <li class="nested">
+                                Print all the fullnames in the increasing order of their age.</li>
+                            <li class="nested">
+                                Print all the fullnames in the reverse alphabetical order.</li>
+                            <li class="nested">
+                                Print all the fullnames in the decreasing order of their salaries.</li>
+                            <li class="nested">
+                                Print all the cities in which the people live. There should not be any duplicate cities.
+                            </li>
+                            <li class="nested">
+                                Print all the male names whose age is greater than 25.</li>
+                            <li class="nested">
+                                Print all names that starts with "p" and the firstname should be in UPPERCASE. e.g.
+                                PRAVEEN gubbala.</li>
+                        </ol>
+                    </li>
+
+                    <b>Working with Strings</b>
+                    <li class="nested">
+                        Find the first occurrence of a character in a given string.
+                    </li>
+                    <li class="nested">
+                        Find the last occurrence of a character in a given string.
+                    </li>
+                    <li class="nested">
+                        Search all occurrences of a character in a given string.
+                    </li>
+                    <li class="nested">
+                        Count occurrences of a character in a given string.
+                    </li>
+                    <li class="nested">
+                        Find the highest frequency character in a string.
+                    </li>
+                    <li class="nested">
+                        Find the lowest frequency character in a string.
+                    </li>
+                    <li class="nested">
+                        Count the frequency of each character in a string.
+                    </li>
+                    <li class="nested">
+                        Remove the first occurrence of a character from a string.
+                    </li>
+                    <li class="nested">
+                        Remove the last occurrence of a character from a string.
+                    </li>
+                    <li class="nested">
+                        Delete all occurrences of a character from a string.
+                    </li>
+                    <li class="nested">
+                        Remove all repeated characters from a given string.
+                    </li>
+                    <li class="nested">
+                        Replace the first occurrence of a character with another in a string.
+                    </li>
+                    <li class="nested">
+                        Replace the last occurrence of a character with another in a string.
+                    </li>
+                    <li class="nested">
+                        Put all occurrences of a character with another in a string.
+                    </li>
+                    <li class="nested">
+                        Find the first occurrence of a word in a given string.
+                    </li>
+                    <li class="nested">
+                        Find the last occurrence of a word in a given string.
+                    </li>
+                    <li class="nested">
+                        Search all occurrences of a word in a given string.
+                    </li>
+                    <li class="nested">
+                        Count occurrences of a word in a given string.
+                    </li>
+                    <li class="nested">
+                        Remove the first occurrence of a word from the string.
+                    </li>
+                    <li class="nested">
+                        Remove the last occurrence of a word in a given string.
+                    </li>
+                    <li class="nested">
+                        Delete all occurrence of a word in a given string.
+                    </li>
+                    <li class="nested">
+                        A Trim leading white space characters from a given string.
+                    </li>
+                    <li class="nested">
+                        Trim trailing white space characters from a given string.
+                    </li>
+                    <li class="nested">
+                        Trim both leading and trailing white space characters from a given string.
+                    </li>
+                    <li class="nested">
+                        Remove all extra blank spaces from the given string.
+                    </li>
+                    <li class="nested">
+                        A String is Palindrome or Not
+                    </li>
+                    <li class="nested">
+                        A String Is an Anagram or Not
+                    </li>
+                    <li class="nested">
+                        Find the length of a string.
+                    </li>
+                    <li class="nested">
+                        Copy one string to another string.
+                    </li>
+                    <li class="nested">
+                        Concatenate two strings.
+                    </li>
+                    <li class="nested">
+                        Compare two strings.
+                    </li>
+                    <li class="nested">
+                        Convert lowercase string to uppercase.
+                    </li>
+                    <li class="nested">
+                        Convert uppercase string to lowercase.
+                    </li>
+                    <li class="nested">
+                        Toggle case of each character of a string.
+                    </li>
+                    <li class="nested">
+                        Find a total number of alphabets, digits or special character in a string.
+                    </li>
+                    <li class="nested">
+                        Count the total number of vowels and consonants in a string.
+                    </li>
+                    <li class="nested">
+                        Count the total number of words in a string.
+                    </li>
+                    <li class="nested">
+                        Find the reverse of a string.
+                    </li>
+                    <li class="nested">
+                        Check whether a string is a palindrome or not.
+                    </li>
+                    
+                    <li class="nested">
+                        Reverse order of words in a given string.
+                    </li>
+                   
+                    <li class="nested">
+                        Reverse of a number using toString, split, reverse and join methods.</li>
+                    <li class="nested">
+                        Elimination of zeroes from a given number.</li>
+                    <li class="nested">
+                        Find the number of digits of a given number using toString() and length property</li>
+                    <li class="nested">
+                        Write a program to take a string and print only the numeric characters using. Example:
+                        Input->‘Q1STR5684AK’; Output->‘15684’
+                    </li>
+                    <li class="nested">
+                        Search for a given number in an array
+                    </li>
+                    <li class="nested">
+                        Print the number of words in a given string
+                    </li>
+                    <li class="nested">
+                        Remove the single spaces from a given sentence
+                    </li>
+                    <li class="nested">
+                        remove all the spaces from a given string
+                    </li>
+                    <li class="nested">
+                        Search a given string in a sentence(both uppercase and lowercase)
+                    </li>
+                    <li class="nested">
+                        Write a program to convert a sample sentence string into an array of all the words in the
+                        sentence. Example: Input->‘Hello World’; Output->[‘Hello’,‘World’]
+                    </li>
+                    <li class="nested">
+                        Write a program to eliminate all numeric characters from a string. Example: Input->‘Q1STR5684A’;
+                        Output-> ‘QSTRAK’
+                    </li>
+                    <li class="nested">
+                        Write a program to take a string and print only the numeric characters. Example:
+                        Input->‘Q1STR5684AK’; Output->‘15684’
+                    </li>
+                    <li class="nested">
+                        Write a program to take a string and print the number of characters in the string. Example:
+                        Input->‘Hello’; Output->5
+                    </li>
+                    <li class="nested">
+                        Write a program to take a 16-digit credit card number and replace the first 12 characters with
+                        ‘X’. Example:Input->‘9765143265387960’; Output->‘XXXXXXXXXXXX7960’
+                    </li>
+                    <li class="nested">
+                        Write a program to take a string and replace all vowels with ‘8’. Example: Input->‘This is
+                        awesome’; Output->‘Th8s 8s 8w8s8m8’
+                    </li>
+                    <li class="nested">
+                        Write a program to hide the middle six digits of a phone number. Example: Input-> '9876543210';
+                        Output-> '98XXXXXX10'
+                    </li>
+                    <li class="nested">
+                        Append the calling code of India(+91) to a given phone number. Example: Input-> '9876543210';
+                        Output-> '+919876543210'
+                    </li>
+                    <li class="nested">
+                        Check whether a given number is a valid phone number.
+                        <pre>
+        Example:Input-> '7654893274'; Output-> 'valid'
+        Input-> '785487438754'; Output-> 'invalid'.........(must be 10 digits)
+        Input-> '7854s54839'; Output-> 'invalid'.............(must NOT contain letters)
+    </pre>
+                    </li>
+                    <li class="nested">
+                        Check whether a given number is a valid credit card number. Example:
+                        <pre>
+        Example:
+        Input-> '7463836483647454'; Output-> 'valid'
+        Input-> '74638364836474548'; Output-> 'invalid'...(must be 16 digits)
+        Input-> '7463836w4836o745'; Output-> 'invalid'...(must contain only numbers)
+    </pre>
+                    </li>
+                    <li class="nested">
+                        Write a program to add hyphens (-) in between a given credit card number.
+                        <pre>
+        Example:
+        Input-> '6484638463487486'; Output-> '6484-6384-6348-7486'
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        Sort a given string
+                        <pre>
+        Example: ‘praveen’=>’aeenprv’
+                        </pre>
+                    </li>
+                    <li class="nested">
+                        Eliminate Duplicate characters in given string
+                        <pre>                        
+        Example: ‘praveengubbala’ => ‘pravengubl’
+                        </pre>
+                    </li>
+                    <li class="nested">
+Write a program to print only numbers out of a given string
+                        <pre>
+        Example: let us take pr34s2v9q4
+        The output should be 3,4,2,9,4
+                        </pre>
+                    </li>
+                   
+                </ol>
+            </li>
+            
+        </ol>
+    </div>
+</body>
+
+</html>
