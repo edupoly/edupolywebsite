@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: "16"
+      - run: node --version
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
       - name: Install Dependencies
         run: npm install
       - run: npm run build --prod
