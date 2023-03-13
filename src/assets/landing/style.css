@@ -19663,8 +19663,8 @@ textarea.form-control-lg {
     left: 0;
     right: 0;
     background-color: var(--bs-body-bg);
-    -webkit-animation: fadeInDown 0.5s;
-            animation: fadeInDown 0.5s;
+    /* -webkit-animation: fadeInDown 0.5s;
+            animation: fadeInDown 0.5s; */
     width: 100%;
     border-bottom: 1px solid var(--bs-gray-200);
   }
@@ -19675,10 +19675,11 @@ textarea.form-control-lg {
     padding: 14px 0;
   }
   header.navbar-sticky-on .navbar-brand .navbar-brand-item {
-    height: 22px;
+    /* height: 22px; */
+    /* content: url("../edupoly-logo-short.png"); */
   }
 }
-@-webkit-keyframes fadeInDown {
+/* @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
@@ -19701,7 +19702,7 @@ textarea.form-control-lg {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-}
+} */
 .navbar-transparent {
   background: transparent;
   position: absolute;
@@ -22278,3 +22279,7 @@ html[dir=rtl] .choices__input {
 
 /*User CSS*/
 /*# sourceMappingURL=style.css.map */
+h1,h2,h3,h4,h5,h6{
+  color:#17499a !important;
+}
+
