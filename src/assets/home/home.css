@@ -1,0 +1,20 @@
+.contactModal{
+    width:100%;
+    height: 75vh;
+}
+
+#project-week::before {
+    background: none !important;
+}
+
+#project-week::after {
+    background: none !important;
+}
+
+[data-bs-theme=dark] #project-week a{
+    color: #a1a1a8;
+}
+
+[data-bs-theme=light] #project-week a{
+  color: #747579;
+}

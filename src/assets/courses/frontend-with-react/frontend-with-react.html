@@ -1,0 +1,2757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EduPoly - Angular,ReactJS,Frontend,Backend,Full Stack,MEAN stack,MERN stack Training in Hyderabad</title>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="edupoly.com">
+    <meta name="description"
+        content="Edupoly - Angular,ReactJS,Frontend,Backend,Full Stack,MEAN stack,MERN stack Training in Hyderabad">
+
+    <!-- Dark mode -->
+    <script>
+        const storedTheme = localStorage.getItem('theme')
+
+        const getPreferredTheme = () => {
+            if (storedTheme) {
+                return storedTheme
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+
+        const setTheme = function (theme) {
+            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-bs-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme', theme)
+            }
+        }
+
+        setTheme(getPreferredTheme())
+
+        window.addEventListener('DOMContentLoaded', () => {
+            var el = document.querySelector('.theme-icon-active');
+            if (el != 'undefined' && el != null) {
+                const showActiveTheme = theme => {
+                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                        element.classList.remove('active')
+                    })
+
+                    btnToActive.classList.add('active')
+                    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+                }
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+                        setTheme(getPreferredTheme())
+                    }
+                })
+
+                showActiveTheme(getPreferredTheme())
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', () => {
+                            const theme = toggle.getAttribute('data-bs-theme-value')
+                            localStorage.setItem('theme', theme)
+                            setTheme(theme)
+                            showActiveTheme(theme)
+                        })
+                    })
+
+            }
+        })
+
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../common/tiny-slider/tiny-slider.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="../../common/style.css">
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="../../home/home.css">
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="frontend-with-react.css">
+</head>
+
+<body>
+
+    <!-- Header START -->
+    <header class="navbar-light navbar-sticky">
+        <!-- Logo Nav START -->
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <!-- Logo START -->
+                <a class="navbar-brand" href="/">
+                    <img class="light-mode-item navbar-brand-item" src="../../edupoly-logo-light.png" alt="logo">
+                    <img class="dark-mode-item navbar-brand-item" src="../../edupoly-logo-dark.png" alt="logo">
+                </a>
+                <!-- Logo END -->
+
+                <!-- Responsive navbar toggler -->
+                <button class="navbar-toggler ms-auto ms-sm-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-animation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <!-- Main navbar START -->
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <!-- Nav Search START -->
+                    <!--                     <div class="col-xl-7">
+                            <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+                                <div class="nav-item w-100">
+                                    <form class="rounded position-relative">
+                                        <input class="form-control pe-5 bg-secondary bg-opacity-10 border-0" type="search"
+                                            placeholder="Search" aria-label="Search">
+                                        <button
+                                            class="btn btn-link bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
+                                            type="submit"><i class="fas fa-search fs-6 text-primary"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- Nav Search END -->
+
+                    <!-- Nav Main menu START -->
+                    <ul class="navbar-nav navbar-nav-scroll ms-auto">
+                        <!-- Nav item 1 Courses -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="demoMenu" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Courses</a>
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+                                <li> <a class="dropdown-item" href="/frontend-with-angular">Frontend with Angular</a>
+                                </li>
+                                <li> <a class="dropdown-item" href="/frontend-with-reactjs">Frontend with ReactJS</a>
+                                </li>
+                                <li> <a class="dropdown-item" href="/fullstack-with-mean">Full Stack with MEAN</a></li>
+                                <li> <a class="dropdown-item" href="/fullstack-with-mern">Full Stack with MERN</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Nav item 2 Tutorials -->
+                        <li class="nav-item dropdown"><a class="nav-link" href="/tutorials">Tutorials</a></li>
+
+                        <!-- Nav item 3 Trainings -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="demoMenu" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Trainings</a>
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+                                <li> <a class="dropdown-item" href="/corporate-training">Corporate training</a></li>
+                                <li> <a class="dropdown-item" href="/bootcamp-training">Bootcamp training</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Nav item 4 Contact Us -->
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a>
+                        </li>
+                    </ul>
+                    <!-- Nav Main menu END -->
+                </div>
+                <!-- Main navbar END -->
+                <!-- Dark mode options START -->
+                <div class="dropdown">
+                    <button class="btn btn-light btn-sm lh-1 p-2 mb-0" id="bd-theme" type="button" aria-expanded="false"
+                        data-bs-toggle="dropdown" data-bs-display="static">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                            class="bi bi-circle-half fa-fw theme-icon-active" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                            <use href="#"></use>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">
+                        <li class="mb-1">
+                            <button type="button" class="dropdown-item d-flex align-items-center"
+                                data-bs-theme-value="light">
+                                <svg width="16" height="16" fill="currentColor"
+                                    class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                                    <use href="#"></use>
+                                </svg>Light
+                            </button>
+                        </li>
+                        <li class="mb-1">
+                            <button type="button" class="dropdown-item d-flex align-items-center"
+                                data-bs-theme-value="dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-moon-stars-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                                    <path
+                                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                                    <use href="#"></use>
+                                </svg>Dark
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center active"
+                                data-bs-theme-value="auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-half fa-fw mode-switch me-1" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                                    <use href="#"></use>
+                                </svg>Auto
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Dark mode options END -->
+            </div>
+        </nav>
+        <!-- Logo Nav END -->
+    </header>
+    <!-- Header END -->
+
+    <!-- **************** MAIN CONTENT START **************** -->
+    <main>
+
+        <!-- =======================
+Page intro START -->
+        <section class="bg-light py-0 py-sm-5">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-lg-8">
+                        <!-- Badge -->
+                        <h6 class="mb-3 font-base bg-primary text-white py-2 px-4 rounded-2 d-inline-block">Web
+                            Development</h6>
+                        <!-- Title -->
+                        <h1>Frontend Development with ReactJS</h1>
+                        <!-- Content -->
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i
+                                    class="fas fa-user-graduate text-orange me-2"></i>1k Enrolled</li>
+                            <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i
+                                    class="fas fa-signal text-success me-2"></i>All levels</li>
+                            <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i
+                                    class="bi bi-patch-exclamation-fill text-danger me-2"></i>Last updated 04/2023</li>
+                            <li class="list-inline-item h6 mb-0"><i
+                                    class="fas fa-globe text-info me-2"></i>English,Telugu,Hindi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =======================
+Page intro END -->
+
+        <!-- =======================
+Page content START -->
+        <section class="pb-0 py-lg-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Main content START -->
+                    <div class="col-lg-8">
+                        <div class="card shadow rounded-2 p-0">
+                            <!-- Tabs START -->
+                            <div class="card-header border-bottom px-4 py-3">
+                                <ul class="nav nav-pills nav-tabs-line py-0" id="course-pills-tab" role="tablist">
+                                    <!-- Tab item -->
+                                    <li class="nav-item me-2 me-sm-4" role="presentation">
+                                        <button class="nav-link mb-2 mb-md-0 active" id="course-pills-tab-1"
+                                            data-bs-toggle="pill" data-bs-target="#course-pills-1" type="button"
+                                            role="tab" aria-controls="course-pills-1"
+                                            aria-selected="true">Overview</button>
+                                    </li>
+                                    <!-- Tab item -->
+                                    <li class="nav-item me-2 me-sm-4" role="presentation">
+                                        <button class="nav-link mb-2 mb-md-0" id="course-pills-tab-2"
+                                            data-bs-toggle="pill" data-bs-target="#course-pills-2" type="button"
+                                            role="tab" aria-controls="course-pills-2"
+                                            aria-selected="false">Curriculum</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Tabs END -->
+
+                            <!-- Tab contents START -->
+                            <div class="card-body p-4">
+                                <div class="tab-content pt-2" id="course-pills-tabContent">
+                                    <!-- Content START -->
+                                    <div class="tab-pane fade show active" id="course-pills-1" role="tabpanel"
+                                        aria-labelledby="course-pills-tab-1">
+                                        <!-- Course detail START -->
+                                        <h5 class="mb-3">Course Description</h5>
+                                        <p class="mb-3">Welcome to the <strong> Frontend Development with
+                                                ReactJS</strong> course.</p>
+                                        <p class="mb-3">In this practical hands-on training, you're going to master web
+                                            development using ReactJS with this ultimate course that includes all the
+                                            latest web development technologies.</p>
+                                        <p class="mb-0">We provide an end-to-end guidance to all topics necessary for
+                                            current industry level standards. We focus
+                                            on foundational topics so that students have a strong knowledge on basics.
+                                            We understand that theory alone isn't
+                                            going to give you the best experience, so that's why this course is packed
+                                            with practical hands on examples that you
+                                            can follow step by step.</p>
+
+                                        <!-- List content -->
+                                        <h5 class="mt-4">What you'll learn</h5>
+                                        <ul class="list-group list-group-borderless mb-3">
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Introduction to
+                                                Web Development</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>HTML, CSS and
+                                                Bootstrap</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Programming
+                                                Foundation with JavaScript</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Data Structures
+                                                in JavaScript</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Functional
+                                                Programming with JavaScript</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Asynchronous
+                                                activities, Events and DOM</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>TypeScript and
+                                                ReactJS Foundation</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Components</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Handling Data with
+                                                Forms and Routing</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Redux and Redux
+                                                Toolkit with Query</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Project and Case
+                                                Study</li>
+                                            <li class="list-group-item h6 fw-light d-flex mb-0"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Assignments</li>
+                                        </ul>
+                                        <!-- Course detail END -->
+
+                                    </div>
+                                    <!-- Content END -->
+
+                                    <!-- Content START -->
+                                    <div class="tab-pane fade" id="course-pills-2" role="tabpanel"
+                                        aria-labelledby="course-pills-tab-2">
+                                        <!-- Schedule START -->
+                                        <div class="accordion accordion-icon accordion-active-dark"
+                                            id="accordionExample2">
+                                            <!-- Week 1 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button
+                                                        class="accordion-button fw-bold rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-1" aria-expanded="true"
+                                                        aria-controls="collapse-1">
+                                                        Week 1 - HTML, CSS and Bootstrap
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-1" class="accordion-collapse collapse show"
+                                                    aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">HTML</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">What is Web?</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">HTML building blocks</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Text formatting elements</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Structure content with lists
+                                                                    and tables</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">User input with forms</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with images and media
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Navigation with anchors</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">CSS</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Apply styling to HTML page
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Fundamental CSS Properties
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Box Model</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Selectors</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Flexbox</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Responsive design</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Animations and Transitions
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Bootstrap</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Utility classes</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Helpers</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Components</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Layout creation</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Responsive layout</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Forms</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Icons and Images</h6>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 2 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-2">
+                                                    <button
+                                                        class="accordion-button fw-bold rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-2" aria-expanded="false"
+                                                        aria-controls="collapse-2">
+                                                        Week 2 - Programming Foundation with JavaScript
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-2" class="accordion-collapse collapse"
+                                                    aria-labelledby="heading-2" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Building Blocks</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Variables, declarations:
+                                                                    var,let and const</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Data types</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Operators</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Expressions</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Statements</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Blocks and Iteration</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">if..else</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">switch...case</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">while</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">for</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">nested for</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Logic Development</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Conditional programs</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Iterative programs</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Pattern programs</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Accumulation programs</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Typecasting</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 3 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-3">
+                                                    <button
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-3" aria-expanded="false"
+                                                        aria-controls="collapse-3">
+                                                        Week 3 - Data Structures in JavaScript
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-3" class="accordion-collapse collapse"
+                                                    aria-labelledby="heading-3" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Arrays</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Indexing and memory</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Creation, reading and
+                                                                    updation</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Searching, sorting and
+                                                                    filtering</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with scenarios</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Duplication and processing
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Object Literals and JSON</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Properties, keys and values
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Creation, accessing and
+                                                                    updation</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">for-in based processing</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Array of objects</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with JSON</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Strings</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Immutability</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">String handling</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">String methods</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Array of strings</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with strings and JSON
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 4 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-4" aria-expanded="false"
+                                                        aria-controls="collapse-4">
+                                                        Week 4 - Functional Programming with JavaScript
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-4" class="accordion-collapse collapse"
+                                                    aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Foundation</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Declaration and definition
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Parameters and arguments</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Call by value and reference
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with functions</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Reusability</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Types</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Function expressions and
+                                                                    literals</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Firstclass functions and
+                                                                    callbacks</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Object oriented principles
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">IIFE and anonymous functions
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Arrow functions and default
+                                                                    parameters</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Scope</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Global scope, block scope and
+                                                                    closure</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Lexical scope</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with array methods
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Methods and this keyword</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">call, apply and bind</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 5 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-5" aria-expanded="false"
+                                                        aria-controls="collapse-5">
+                                                        Week 5 - Asynchronous activities, Events and DOM
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-5" class="accordion-collapse collapse"
+                                                    aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Imperative Element Creation</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">DOM element creation</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Selection, reading, updation
+                                                                    and deletion</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Styling elements</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Generation of user interface
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Nodelist vs HTMLCollection
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Events</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Event listeners, handlers and
+                                                                    event binding</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Event Object and target</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Form handling</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with events</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with DOM</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">AJAX</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Asynchronous functions</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Event based API call handling
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Callbacks and Promises</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">axios</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with json-server</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 6 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-6" aria-expanded="false"
+                                                        aria-controls="collapse-6">
+                                                        Week 6 - TypeScript and ReactJS Foundation
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-6" class="accordion-collapse collapse"
+                                                    aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Typescript</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Types, Functions and execution flow</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Classes and class inheritance</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Decorators in TypeScript</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Organising our application with modules</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Interfaces</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Setup and Foundation</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">CDN based ReactJS application</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">React and ReactDOM library</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">JSX</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Data binding and event handling</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">React virtual DOM</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">State and Props</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Reusability and refactoring</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">useState and rendering</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Immutability and state updation</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">List generation and interactivity</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Parent-child component communication</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 7 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-7" aria-expanded="false"
+                                                        aria-controls="collapse-7">
+                                                        Week 7 - Components
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-7" class="accordion-collapse collapse"
+                                                    aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Hooks</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">useEffect</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">useCallback and useMemo</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">useRef</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">React.memo</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Custom Hooks</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">React API</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Context API</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">useContext</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with Context</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Component communication with Context</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Data handling with forms</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Types of components</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Controlled vs uncontrolled components</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Class components</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Higher Order COmponents</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Pure components</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">CLass component lifecycle</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 8 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-8" aria-expanded="false"
+                                                        aria-controls="collapse-8">
+                                                        Week 8 - Handling Data with Forms and Routing
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-8" class="accordion-collapse collapse"
+                                                    aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Forms Handling</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        <!-- Item -->
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">State management of forms</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Validation and error handling</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Styling and classes</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Formik</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Formik error handling</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Routing</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Configuration and SPA</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">React Router DOM</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">BrowserRouter, Route, Link and NavLink</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">useNavigate and useParams</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Parameterised routing</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Working With Routing</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Website navigation</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Function based navigation</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Login and logout</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Conditional routing</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 9 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-9" aria-expanded="false"
+                                                        aria-controls="collapse-9">
+                                                        Week 9 - Redux and Redux Toolkit with Query
+                                                    </button>
+                                                </h6>
+                                                <div id="collapse-9" class="accordion-collapse collapse"
+                                                    aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+                                                    <div class="accordion-body p-0">
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Redux</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Configuration of redux store</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Reducers and action object</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Connect and dispatch</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">mapStateToProps and mapDispatchToProps</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Selectors, reselect and performance</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Redux Toolkit</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">createSlice</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Generation of reducer and actions</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Selectors</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Mutable state updates</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Working with Redux Toolkit</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="text-center p-3">
+                                                            <h6 class="mb-0 fw-normal">Redux Toolkit Query</h6>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Configuration of API</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Services</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">Query architecture</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="my-0"> <!-- Divider -->
+
+                                                        <!-- Item -->
+                                                        <div class="d-flex align-items-center p-3">
+                                                            <!-- Icon -->
+                                                            <i class="bi bi-check2-circle text-success"></i>
+                                                            <!-- Content -->
+                                                            <div class="ms-2">
+                                                                <h6 class="mb-0 fw-normal">json-server CRUD operations</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Week 10 -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button id="project-week"
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" data-bs-toggle="collapse" aria-expanded="false">
+                                                        Week 10 - Project and Case Study
+                                                    </button>
+                                                </h6>
+                                            </div>
+                                            <!-- Assignments -->
+                                            <div class="accordion-item mb-3">
+                                                <h6 class="accordion-header font-base" id="heading-1">
+                                                    <button id="project-week"
+                                                        class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block collapsed"
+                                                        type="button" aria-expanded="false">
+                                                        <a href="/assets/assignments/assignments.html">Assignments</a>
+                                                    </button>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <!-- Schedule END -->
+                                    </div>
+                                    <!-- Content END -->
+                                </div>
+                            </div>
+                            <!-- Tab contents END -->
+                        </div>
+                    </div>
+                    <!-- Main content END -->
+
+                    <!-- Right sidebar START -->
+                    <div class="col-lg-4 pt-5 pt-lg-0">
+                        <div class="row mb-5 mb-lg-0">
+                            <div class="col-md-6 col-lg-12">
+                                <!-- Video START -->
+                                <div class="card shadow p-2 mb-4 z-index-9">
+                                    <div class="overflow-hidden rounded-3">
+                                        <img src="assets/images/courses/4by3/01.jpg" class="card-img"
+                                            alt="course image">
+                                        <!-- Overlay -->
+                                        <div class="bg-overlay bg-dark opacity-6"></div>
+                                        <div class="card-img-overlay d-flex align-items-start flex-column p-3">
+                                            <!-- Video button and link -->
+                                            <div class="m-auto">
+                                                <a href="https://www.youtube.com/embed/tXHviS-4ygo"
+                                                    class="btn btn-lg text-danger btn-round btn-white-shadow mb-0"
+                                                    data-glightbox="" data-gallery="course-video">
+                                                    <i class="fas fa-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card body -->
+                                    <div class="card-body px-3">
+                                        <!-- Info -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <!-- Price and time -->
+                                            <div>
+                                                <div class="d-flex align-items-center">
+                                                    <h3 class="fw-bold mb-0 me-2">₹15000</h3>
+                                                </div>
+                                            </div>
+
+                                            <!-- Register button -->
+                                            <a href="#" class="btn btn-success mb-0">Register</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Video END -->
+
+                                <!-- Course info START -->
+                                <div class="card card-body shadow p-4 mb-4">
+                                    <!-- Title -->
+                                    <h4 class="mb-3">This course includes</h4>
+                                    <ul class="list-group list-group-borderless">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span class="h6 fw-light mb-0"><i
+                                                    class="fas fa-fw fa-book-open text-primary"></i>Lectures</span>
+                                            <span>50</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span class="h6 fw-light mb-0"><i
+                                                    class="fas fa-fw fa-clock text-primary"></i>Duration</span>
+                                            <span>1h 30m</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span class="h6 fw-light mb-0"><i
+                                                    class="fas fa-fw fa-signal text-primary"></i>Skills</span>
+                                            <span>Beginner</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span class="h6 fw-light mb-0"><i
+                                                    class="fas fa-fw fa-globe text-primary"></i>Language</span>
+                                            <span>English,Telugu,Hindi</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span class="h6 fw-light mb-0"><i
+                                                    class="fas fa-fw fa-medal text-primary"></i>Certificate</span>
+                                            <span>Yes</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Course info END -->
+                            </div>
+                        </div><!-- Row End -->
+                    </div>
+                    <!-- Right sidebar END -->
+
+                </div><!-- Row END -->
+            </div>
+        </section>
+        <!-- =======================
+Page content END -->
+
+        <!-- =======================
+Listed courses START -->
+        <section class="pt-0">
+            <div class="container">
+                <!-- Title -->
+                <div class="row mb-4">
+                    <h2 class="mb-0">Top Listed Courses</h2>
+                </div>
+
+                <div class="row">
+                    <!-- Slider START -->
+                    <div class="tiny-slider arrow-round arrow-blur arrow-hover">
+                        <div class="tiny-slider-inner" data-autoplay="false" data-arrow="true" data-edge="2"
+                            data-dots="false" data-items="3" data-items-lg="2" data-items-sm="1">
+
+                            <!-- Card Item START -->
+                            <div class="pb-4">
+                                <div class="card p-2 border">
+                                    <div class="rounded-top overflow-hidden">
+                                        <div class="card-overlay-hover">
+                                            <img src="assets/images/courses/4by3/17.jpg" class="card-img-top"
+                                                alt="course image">
+                                        </div>
+                                        <!-- Hover element -->
+                                        <div class="card-img-overlay">
+                                            <div class="card-element-hover d-flex justify-content-end">
+                                                <a href="#" class="icon-md bg-white rounded-circle text-center">
+                                                    <i class="fas fa-shopping-cart text-danger"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Title -->
+                                        <h5 class="card-title"><a href="#">Frontend with Angular</a></h5>
+                                        <!-- Badge and Price -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="badge bg-info bg-opacity-10 text-info"><i
+                                                    class="fas fa-circle small fw-bold me-2"></i>Frontend
+                                                Development</a>
+                                            <!-- Price -->
+                                            <h3 class="text-success mb-0">₹15000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Item END -->
+
+                            <!-- Card Item START -->
+                            <div class="pb-4">
+                                <div class="card p-2 border">
+                                    <div class="rounded-top overflow-hidden">
+                                        <div class="card-overlay-hover">
+                                            <img src="assets/images/courses/4by3/18.jpg" class="card-img-top"
+                                                alt="course image">
+                                        </div>
+                                        <!-- Hover element -->
+                                        <div class="card-img-overlay">
+                                            <div class="card-element-hover d-flex justify-content-end">
+                                                <a href="#" class="icon-md bg-white rounded-circle text-center">
+                                                    <i class="fas fa-shopping-cart text-danger"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Title -->
+                                        <h5 class="card-title"><a href="#">Frontend with ReactJS</a></h5>
+                                        <!-- Badge and Price -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="badge bg-info bg-opacity-10 text-info"><i
+                                                    class="fas fa-circle small fw-bold me-2"></i>Frontend
+                                                Development</a>
+                                            <!-- Price -->
+                                            <h3 class="text-success mb-0">₹15000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Item END -->
+
+                            <!-- Card Item START -->
+                            <div class="pb-4">
+                                <div class="card p-2 border">
+                                    <div class="rounded-top overflow-hidden">
+                                        <div class="card-overlay-hover">
+                                            <img src="assets/images/courses/4by3/21.jpg" class="card-img-top"
+                                                alt="course image">
+                                        </div>
+                                        <!-- Hover element -->
+                                        <div class="card-img-overlay">
+                                            <div class="card-element-hover d-flex justify-content-end">
+                                                <a href="#" class="icon-md bg-white rounded-circle text-center">
+                                                    <i class="fas fa-shopping-cart text-danger"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Title -->
+                                        <h5 class="card-title"><a href="#">Fullstack with MEAN</a>
+                                        </h5>
+                                        <!-- Badge and Price -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="badge bg-info bg-opacity-10 text-info"><i
+                                                    class="fas fa-circle small fw-bold me-2"></i>Fullstack
+                                                Development</a>
+                                            <!-- Price -->
+                                            <h3 class="text-success mb-0">₹15000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Item END -->
+
+                            <!-- Card Item START -->
+                            <div class="pb-4">
+                                <div class="card p-2 border">
+                                    <div class="rounded-top overflow-hidden">
+                                        <div class="card-overlay-hover">
+                                            <img src="assets/images/courses/4by3/20.jpg" class="card-img-top"
+                                                alt="course image">
+                                        </div>
+                                        <!-- Hover element -->
+                                        <div class="card-img-overlay">
+                                            <div class="card-element-hover d-flex justify-content-end">
+                                                <a href="#" class="icon-md bg-white rounded-circle text-center">
+                                                    <i class="fas fa-shopping-cart text-danger"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Title -->
+                                        <h5 class="card-title"><a href="#">Fullstack with MERN</a>
+                                        </h5>
+                                        <!-- Badge and Price -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="badge bg-info bg-opacity-10 text-info"><i
+                                                    class="fas fa-circle small fw-bold me-2"></i>Fullstack
+                                                Development</a>
+                                            <!-- Price -->
+                                            <h3 class="text-success mb-0">₹15000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Item END -->
+                        </div>
+                    </div>
+                    <!-- Slider END -->
+                </div>
+            </div>
+        </section>
+        <!-- =======================
+Listed courses END -->
+
+    </main>
+    <!-- **************** MAIN CONTENT END **************** -->
+
+    <!-- =======================
+        Footer START -->
+    <footer class="pt-5 bg-light">
+        <div class="container">
+            <!-- Row START -->
+            <div class="row g-4">
+
+                <!-- Widget 1 START -->
+                <div class="col-lg-3">
+                    <!-- logo -->
+                    <a class="me-0" href="/index.html">
+                        <img class="light-mode-item h-40px" src="../../edupoly-logo-light.png" alt="logo">
+                        <img class="dark-mode-item h-40px" src="../../edupoly-logo-dark.png" alt="logo">
+                    </a>
+                    <p class="my-3">Eduport education theme, built specifically for the education centers which is
+                        dedicated
+                        to teaching and involve learners. </p>
+                </div>
+                <!-- Widget 1 END -->
+
+                <!-- Widget 2 START -->
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <!-- Link block -->
+                        <div class="col-6 col-md-4">
+                            <h5 class="mb-2 mb-md-4">Company</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">News and Blogs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Career</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Link block -->
+                        <div class="col-6 col-md-4">
+                            <h5 class="mb-2 mb-md-4">Community</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a class="nav-link" href="#">Documentation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Faq</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Link block -->
+                        <div class="col-6 col-md-4">
+                            <h5 class="mb-2 mb-md-4">Teaching</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a class="nav-link" href="#">Become a teacher</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">How to guide</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Widget 2 END -->
+
+                <!-- Widget 3 START -->
+                <div class="col-lg-3">
+                    <h5 class="mb-2 mb-md-4">Get in touch with us</h5>
+                    <!-- Time -->
+                    <p class="mb-2">
+                        Address:<span class="h6 fw-light ms-2">372, HMT Hills Rd, Addagutta Society, Jal Vayu Vihar,
+                            Kukatpally, Hyderabad, Telangana 500085</span>
+                        <span class="d-block small">(9:AM to 8:PM IST)</span>
+                    </p>
+
+                    <p class="mb-0">Email:<a class="h6 fw-light ms-2"
+                            href="mailto:someone@example.com">info.edupoly@gmail.com</a></p>
+                </div>
+                <!-- Widget 3 END -->
+            </div><!-- Row END -->
+        </div>
+    </footer>
+    <!-- =======================
+        Footer END -->
+
+    <!-- Back to top -->
+    <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Vendors -->
+    <script src="../../common/tiny-slider/tiny-slider.js"></script>
+    <!-- <script src="assets/vendor/glightbox/js/glightbox.js"></script> -->
+
+    <!-- Template Functions -->
+    <script src="../../common/js/functions.js"></script>
+
+</body>
+
+</html>
