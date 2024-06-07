@@ -1,4 +1,5 @@
 
 <div class="topic">
-    <div [innerHTML]="currentTopicContent"></div>
+    <div *ngIf="currentTopicContent" [innerHTML]="currentTopicContent" #topicContent></div>
+    <div *ngIf="!currentTopicContent" class="loader page-loader"></div>
 </div>

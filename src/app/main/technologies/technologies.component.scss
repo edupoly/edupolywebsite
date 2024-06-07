@@ -2,8 +2,8 @@
     width: 75%;
     height: auto;
     border-radius: 10px;
-    padding: 30px;   
-    margin-top:130px; 
+    padding: 30px;
+    margin-top:130px;
 }
 
 @media(max-width:768px){
@@ -26,11 +26,11 @@
     .technologies{
          width: 80%;
          padding:0;
-         .card-body{ 
+         .card-body{
             .col-4{
                 max-width:100% !important;
                 flex:none !important;
-            }             
+            }
             .btn{
                 width: 100%;
             }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { CoursesService } from 'src/app/shared/services/courses.service';
@@ -15,11 +15,12 @@ export class TopicComponent implements OnInit {
 
   ngOnInit(): void {
     this.ar.queryParams.subscribe((res) => {
+      this.currentTopicContent = "";
       this.coursesService.getTopicByTopicId(res.topicId).subscribe((res: any) => {
         this.titleService.setTitle(res[0].title);
         this.currentTopicContent = this.sanitizer.bypassSecurityTrustHtml(res[0].content);
       });
-    });  
+    });
   }
 
 }

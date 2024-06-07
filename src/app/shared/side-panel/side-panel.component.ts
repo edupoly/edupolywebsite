@@ -14,9 +14,9 @@ export class SidePanelComponent implements OnInit {
   currentTopicId:any;
   constructor(public ar:ActivatedRoute, private coursesService:CoursesService,private router:Router) { }
 
-  ngOnInit(): void {   
+  ngOnInit(): void {
     this.ar.params.subscribe((res)=>{
-      this.urlParams = res;      
+      this.urlParams = res;
     });
     this.ar.queryParams.subscribe((res)=>{
       if(this.coursesService.currentWebConcepts!==res.concepts){
